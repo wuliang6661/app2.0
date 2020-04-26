@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.blankj.utilcode.util.ToastUtils;
 import com.oliveapp.face.livenessdetectorsdk.livenessdetector.datatype.LivenessDetectionFrames;
 import com.oliveapp.face.livenessdetectorsdk.livenessdetector.datatype.OliveappFaceInfo;
-import com.oliveapp.libcommon.utility.LogUtil;
 import com.oliveapp.liveness.sample.SampleSaaSResultActivity;
 import com.oliveapp.liveness.sample.SampleUnusualResultActivity;
 import com.oliveapp.liveness.sample.libsaasclient.backend.RequestWithSignatureHelper;
@@ -36,8 +35,11 @@ import cn.synway.app.api.HttpServerImpl;
 import cn.synway.app.base.SynApplication;
 import cn.synway.app.bean.event.FaceAuthEvent;
 import cn.synway.app.bean.event.FaceLoginEvent;
+import cn.synway.synmonitor.logutil.LogUtil;
 
 import static com.oliveapp.liveness.sample.utils.SampleScreenDisplayHelper.ORIENTATION_TYPE_NAME;
+
+//import com.oliveapp.libcommon.utility.LogUtil;
 
 
 /**
@@ -92,7 +94,7 @@ public class YiTuLivenessActivity extends LivenessDetectionMainActivity {
     @Override
     public void onInitializeFail(Throwable e) {
         super.onInitializeFail(e);
-        LogUtil.e(TAG, "无法初始化活体检测...", e);
+        LogUtil.e(TAG, "无法初始化活体检测..."+ e);
         Toast.makeText(this, "无法初始化活体检测", Toast.LENGTH_LONG).show();
         Intent i = new Intent(YiTuLivenessActivity.this, SampleUnusualResultActivity.class);
         i.putExtra(SampleUnusualResultActivity.keyToGetExtra, SampleUnusualResultActivity.INIT_FAIL);
@@ -142,7 +144,7 @@ public class YiTuLivenessActivity extends LivenessDetectionMainActivity {
             publicKey = SignatureUtil.RSAHelper.loadPublicKey(RequestWithSignatureHelper.sPublicKeyContent);
             md5hash = SignatureUtil.generateSignature(publicKey, "testid", requestParams.toString(), "");
         } catch (Exception e) {
-            LogUtil.e(TAG, "JsonException in requestParams makeup in packageVerification", e);
+            LogUtil.e(TAG, "JsonException in requestParams makeup in packageVerification"+ e);
         }
         mProgressDialog = ProgressDialog.show(YiTuLivenessActivity.this,
                 null, "正在比对，请稍等", true, false);

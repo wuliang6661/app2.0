@@ -151,7 +151,7 @@
     },
     {
       "id": "4:1081221278639508645",
-      "lastPropertyId": "16:2177634704788816107",
+      "lastPropertyId": "17:403420179139151043",
       "name": "UserEntry",
       "properties": [
         {
@@ -215,8 +215,8 @@
           "name": "user_roles"
         },
         {
-          "id": "16:2177634704788816107",
-          "name": "is_now_login"
+          "id": "17:403420179139151043",
+          "name": "login_time"
         }
       ],
       "relations": []
@@ -230,7 +230,9 @@
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    2177634704788816107
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

@@ -42,6 +42,9 @@ import rx.Subscriber;
  */
 public class UpdateUtils {
 
+
+
+
     public static boolean isUpdate;
 
     public static void checkUpdate(onSourssListener listener) {
@@ -50,6 +53,9 @@ public class UpdateUtils {
             public void onSuccess(VersionBO s) {
                 if (listener != null) {
                     listener.onComplan();
+                }
+                if(s==null){
+                    return;
                 }
                 String replace = AppUtils.getAppVersionName().replace(".", "");
                 int version = 0;

@@ -258,6 +258,7 @@ public class PersonInfoActivity extends MVPBaseActivity<View, PersonInfoPresente
                 if (appBarOffsize == 0) {
                     resizeAppBar();
                 }
+
                 break;
         }
 

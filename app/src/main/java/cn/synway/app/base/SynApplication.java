@@ -65,13 +65,14 @@ public class SynApplication extends NettyChatApp {
                 //网络库接口
                 // .setHttpAdapter(new InterceptWXHttpAdapter())
                 .build();
+        WXSDKEngine.initialize(this, config);
         try {
             WXSDKEngine.registerModule("wxBaseModule", WxBaseModule.class);
         }
         catch (WXException e) {
             e.printStackTrace();
         }
-        WXSDKEngine.initialize(this, config);
+
     }
 
     /**
