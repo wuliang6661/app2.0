@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_selector_trans"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="60dp">
+            <qyc.library.control.rounded_imageview.SelectableRoundedImageView
+                android:id="@+id/iv_item_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/contact_public_account_none_png"
+                app:sriv_left_bottom_corner_radius="5dp"
+                app:sriv_left_top_corner_radius="5dp"
+                app:sriv_right_bottom_corner_radius="5dp"
+                app:sriv_right_top_corner_radius="5dp" />
+            <ImageView
+                android:id="@+id/iv_download"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:contentDescription="delete this item"
+                android:padding="7dp"
+                android:src="@drawable/down"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tv_unread"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:textSize="13sp"
+                android:layout_gravity="right"
+                android:background="@drawable/gengxin"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:id="@+id/iv_update"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right"
+                android:contentDescription="delete this item"
+                android:padding="7dp"
+                android:src="@drawable/gengxin"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/material_grey_600"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</FrameLayout>

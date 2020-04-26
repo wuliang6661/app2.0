@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000FF" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:selectAllOnFocus="true"
+            android:textColor="#FFFFFF"
+            android:textSize="17.0sp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:selectAllOnFocus="true"
+            android:textColor="#FFFFFF"
+            android:textSize="17.0sp" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:selectAllOnFocus="true"
+            android:textColor="#FFFFFF"
+            android:textSize="17.0sp" />
+    </LinearLayout>
+
+    <qyc.library.control.datetime_wheel.DateTimeWheel
+        android:id="@+id/dateTimeWheel1"
+        android:layout_width="fill_parent"
+         android:layout_below="@id/linearLayout1"
+        android:layout_height="wrap_content"
+        app:wheelDateStyle="onlyDate"
+        app:wheelDrawShadows="false"
+        app:wheelMaxYear="2050"
+        app:wheelMinYear="2000"
+        app:wheelPaddingBottom="10dp"
+        app:wheelPaddingLeft="10dp"
+        app:wheelPaddingRight="10dp"
+        app:wheelPaddingTop="10dp" >
+    </qyc.library.control.datetime_wheel.DateTimeWheel>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateTimeWheel1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/libBtnFlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="设置" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/libBtnFlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

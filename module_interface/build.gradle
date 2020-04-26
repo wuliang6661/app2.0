@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 4
+        versionName "4.0"
+        //ZJW 11.30更新FragementInterface 增加getLoacationInterfacepath
+        //新增LocationInterface 接口和对应的Locationobj
+        //将版本改为2.0
+        //孙量 12.20 版本+1
+        //位置共享增加了TCP上传方式，对应在NetConfig中增加TcpLocationUploadPort
+        //赵江武 2.0 版本+1
+        //数据库接口 TableUpdate 新增了数据库回退的删除delete
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+//本地包仓库
+repositories {
+    flatDir {
+        dirs '../module_common/aars', 'aars'
+    }
+}
+
+dependencies {
+    //    provided fileTree(include: ['*.jar'], dir: 'libs')
+    //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    //        exclude group: 'com.android.support', module: 'support-annotations'
+    //    })
+    //    testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    //三汇公共库
+//    compile(name: 'androidLibrary-release', ext: 'aar')
+    //
+    //    //三汇样式库
+    //    compile(name: 'androidUIStyle-release', ext: 'aar')
+    //    //相机
+    //    compile(name: 'Camera-release', ext: 'aar')
+    //
+    //    //图片选择器 杨思敏
+    //    compile(name: 'PhotoPicker', ext: 'aar')
+    implementation project(':module_common')
+}

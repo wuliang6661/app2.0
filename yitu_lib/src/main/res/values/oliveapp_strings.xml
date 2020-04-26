@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="oliveapp_app_name">活体检测sample</string>
+    <string name="titleText">依图科技</string>
+    <string name="oliveapp_version">1.23.k</string>
+    <string name="subtitleText">活体检测Sample Code</string>
+    <string name="hintCamera">拍摄注册照</string>
+    <string name="hintFrontCamera">类证件照(自拍照)</string>
+    <string name="hintIdcardCapture">自动捕获身份证（正面）</string>
+    <string name="hintIdcardBackCapture">自动捕获身份证（反面）</string>
+    <string name="hintIDcard">翻拍证件照</string>
+    <string name="livenessButtonText">活体检测</string>
+    <string name="settingButtonText">测试专用</string>
+    <string name="title_activity_example_start">启动界面</string>
+    <string name="title_activity_example_result">结果展示界面</string>
+    <string name="title_activity_example_liveness">活体检测界面</string>
+
+    <string name="oliveapp_liveness_detection_pass_hint">恭喜您\n活体检测成功</string>
+    <string name="oliveapp_liveness_detection_fail_hint">检测失败\n请返回重试</string>
+    <string name="oliveapp_liveness_detection_cancel_hint">检测取消\n请返回重试</string>
+
+</resources>

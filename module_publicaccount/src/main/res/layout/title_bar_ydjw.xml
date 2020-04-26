@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    >
+
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxEms="9"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#34393f"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:text="移动警务" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/lblTitle"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_marginRight="15dp"
+            android:id="@+id/popup"
+            android:layout_width="45dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ico_msg"
+                android:focusable="false" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/msgcount_sp"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/mwhite"
+                    android:textSize="@dimen/textview_size_small_x"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:background="#ecedee"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

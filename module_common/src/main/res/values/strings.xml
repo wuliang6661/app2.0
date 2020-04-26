@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Common</string>
+    <string name="hello_world">hello_world</string>
+    <string name="editext_tip">请输入名称</string>
+    <string name="contentDescription"></string>
+</resources>

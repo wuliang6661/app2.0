@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/lib_spinneredit_editTextBgClick" android:state_pressed="true"></item>
+    <item android:drawable="@color/lib_spinneredit_editTextBgUnClick"></item>
+
+</selector> <!-- 可点击VIEW的背景 -->

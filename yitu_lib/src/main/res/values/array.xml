@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="basicConfigList" translatable="false">
+        <item>动作个数</item>
+        <item>活体超时时间</item>
+        <item>固定动作序列</item>
+    </string-array>
+
+    <string-array name="actionCountsList" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="fanpaiClsCountsList" translatable="false">
+        <item>1</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="fanpaiClsThreshold" translatable="false">
+        <item>low</item>
+        <item>high</item>
+    </string-array>
+
+    <string-array name="livenessDectionOvertimeList_key" translatable="false">
+        <item>5秒</item>
+        <item>10秒</item>
+        <item>15秒</item>
+        <item>20秒</item>
+        <item>永不超时</item>
+    </string-array>
+
+    <string-array name="livenessDectionOvertimeList_value" translatable="false">
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+        <item>20000</item>
+        <item>1000000</item>
+    </string-array>
+
+
+    <string-array name="choiceActionSequenceList" translatable="false">
+        <item>张嘴</item>
+        <item>抬头</item>
+        <item>闭眼</item>
+        <item>摇头</item>
+    </string-array>
+
+    <string-array name="choiceActionSequenceList_value" translatable="false">
+        <item>1</item>
+        <item>53</item>
+        <item>3</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="darkDetectEntry" translatable="false">
+        <item>无</item>
+        <item>低</item>
+        <item>中</item>
+        <item>高</item>
+    </string-array>
+
+    <string-array name="darkDetectValue" translatable="false">
+        <item>无</item>
+        <item>低</item>
+        <item>中</item>
+        <item>高</item>
+    </string-array>
+</resources>

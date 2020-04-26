@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_marker"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_marker"
+        />
+
+    <TextView
+        android:id="@+id/tv_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="30dp"
+        android:lines="1"
+        android:maxEms="5"
+        android:ellipsize="end"
+        tools:text="方发生地方FSF"
+        />
+
+</FrameLayout>

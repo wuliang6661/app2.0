@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/lib_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/lib_relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lib_textView1" >
+
+        <ImageButton
+            android:id="@+id/lib_imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/lib_spinneredit_down_png"
+            android:contentDescription="@string/contentDescription" />
+
+        <EditText
+            android:id="@+id/lib_editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/lib_imageButton1"
+            android:background="@drawable/lib_spinneredit_edittextbg_st"
+            android:hint=""
+            android:maxLines="1"
+            android:textColor="#0000FF"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

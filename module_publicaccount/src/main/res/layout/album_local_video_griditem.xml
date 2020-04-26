@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_item_img_local"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/album_pictures_no"/>
+
+        <ImageButton
+            android:id="@+id/id_item_select_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:clickable="false"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/album_picture_unselected"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_item_img_local"
+            android:background="#66000000"
+            android:gravity="center"
+            android:text="--:--"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/video_play"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/id_item_img_local"
+            android:background="#66000000">
+            <TextView
+                android:id="@+id/id_item_tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:textSize="10sp"
+                android:text="--:--"/>
+
+            <TextView
+                android:id="@+id/id_item_tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:layout_marginRight="5dp"
+                android:textSize="10sp"
+                android:text="--"/>
+        </RelativeLayout>
+</RelativeLayout>

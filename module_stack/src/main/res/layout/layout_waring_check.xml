@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/take_check_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/layout_bg"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="核查方式："
+            android:textColor="#1a1a1a"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/edit_check"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/edit_bg"
+            android:gravity="center_vertical"
+            android:hint="请填写核查方式"
+            android:paddingLeft="12dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:text="结论："
+            android:textColor="#1a1a1a"
+            android:textSize="13sp" />
+
+
+        <EditText
+            android:id="@+id/edit_conclusion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/edit_bg"
+            android:gravity="left"
+            android:hint="请填写结论"
+            android:minLines="4"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="备注："
+            android:textColor="#1a1a1a"
+            android:textSize="13sp" />
+
+
+        <EditText
+            android:id="@+id/edit_resons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edit_bg"
+            android:gravity="left"
+            android:hint="请填写备注"
+            android:minLines="4"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/commit"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/button_right_blue"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/White"
+        android:textSize="17sp" />
+
+
+</LinearLayout>

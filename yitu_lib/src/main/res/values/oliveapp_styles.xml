@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="SampleAppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:theme">@android:style/Theme.NoTitleBar.Fullscreen</item>
+    </style>
+
+</resources>

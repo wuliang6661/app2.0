@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/oliveapp_face_captureLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/oliveapp_face_previewLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true">
+
+            <view
+                android:id="@+id/oliveapp_face_cameraPreviewView"
+                class="com.oliveapp.camerasdk.ui.CameraRootView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:id="@+id/oliveapp_face_previewCapturedImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/oliveapp_face_takePictureButtonLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/oliveapp_face_black_shadow">
+            <ImageButton
+                android:id="@+id/oliveapp_face_takePictureButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/oliveapp_camera_alt_white_48dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/oliveapp_face_takePictureButtonLayout"
+            android:id="@+id/oliveapp_face_captureSemiIDCardHintLayout">
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:id="@+id/oliveapp_face_faceSkeletonImageLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/oliveapp_face_faceSkeletonImageView"
+                    android:src="@drawable/oliveapp_face_skeleton_minimum2"
+                    android:scaleType="fitCenter"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:id="@+id/oliveapp_face_faceShadeTopImageView"
+                android:src="@drawable/oliveapp_face_black_shadow"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/oliveapp_face_faceShadeBottomImageView"
+                android:src="@drawable/oliveapp_face_black_shadow"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/oliveapp_face_faceSkeletonImageLayout" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/oliveapp_face_faceShadeLeftImageView"
+                android:src="@drawable/oliveapp_face_black_shadow"
+                android:layout_toLeftOf="@+id/oliveapp_face_faceSkeletonImageLayout"
+                android:layout_toStartOf="@+id/oliveapp_face_faceSkeletonImageLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/oliveapp_face_faceShadeTopImageView"
+                android:layout_above="@+id/oliveapp_face_faceShadeBottomImageView" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/oliveapp_face_faceShadeRightImageView"
+                android:src="@drawable/oliveapp_face_black_shadow"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/oliveapp_face_faceSkeletonImageLayout"
+                android:layout_toEndOf="@+id/oliveapp_face_faceSkeletonImageLayout"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/oliveapp_face_faceShadeTopImageView"
+                android:layout_above="@+id/oliveapp_face_faceShadeBottomImageView" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

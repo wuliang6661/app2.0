@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/title_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/menu" />
+
+
+        <TextView
+            android:id="@+id/today_point"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/menu"
+            android:background="@drawable/range_red"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:text="消息"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/keep_hint"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#e6f1954a"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="推送连接已断开"
+        android:textColor="@color/f_white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</LinearLayout>

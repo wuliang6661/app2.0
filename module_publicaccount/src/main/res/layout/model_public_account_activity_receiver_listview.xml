@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--<ListView-->
+        <!--android:id="@+id/receiver_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+    <ExpandableListView
+        android:id="@+id/receiver_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/empty"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:contentDescription="@null"-->
+            <!--android:src="@drawable/confirm_complete_none" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/img"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:textColor="@color/gray"-->
+            <!--android:text="全部成员未读"-->
+            <!--android:textSize="20sp" />-->
+    <!--</RelativeLayout>-->
+</LinearLayout>

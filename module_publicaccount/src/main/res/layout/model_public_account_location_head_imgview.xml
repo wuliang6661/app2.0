@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <RelativeLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/map_head_circle_sp" >
+
+            <qyc.library.control.rounded_imageview.SelectableRoundedImageView
+                android:id="@+id/imageView1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/contact_headimg_default_png"
+                app:sriv_oval="true" />
+
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/location_signal_offline_png" />
+            <ImageView
+                android:id="@+id/imageView_follow"
+                android:layout_marginTop="5dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                android:src="@drawable/location_sharing_follow"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:text="未知姓名"
+            android:textColor="@color/mwhite" />
+    </LinearLayout>
+
+</LinearLayout>

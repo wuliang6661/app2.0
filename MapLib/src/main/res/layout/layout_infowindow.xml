@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llyt_map"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_info"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        tools:text="test"
+        tools:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#333333"
+        tools:visibility="gone"
+        />
+
+    <ListView
+        android:id="@+id/lv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:divider="@null"
+        />
+
+</LinearLayout>

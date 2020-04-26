@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/f_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/server_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="服务器一" />
+
+
+    <ImageView
+        android:id="@+id/select_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/clistview_success" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/layout_bg" />
+
+
+</RelativeLayout>

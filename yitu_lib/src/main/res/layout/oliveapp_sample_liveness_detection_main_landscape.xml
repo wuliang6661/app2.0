@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.oliveapp.liveness.sample.uicomponents.FixedAspectLayout
+        android:id="@+id/oliveapp_cameraPreviewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oliveapp_fixMode="fixWidth">
+
+        <view
+            android:id="@+id/oliveapp_cameraPreviewView"
+            class="com.oliveapp.camerasdk.ui.CameraRootView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp" />
+
+    </com.oliveapp.liveness.sample.uicomponents.FixedAspectLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/oliveapp_detected_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--滤镜-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/oliveapp_background_filter_landscape_tablet" />
+
+        <!--人脸框-->
+        <ImageView
+            android:id="@+id/oliveapp_start_frame"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/oliveapp_detect_frame"
+            app:layout_heightPercent="60%"
+            app:layout_marginTopPercent="20%"
+            app:layout_widthPercent="40%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="3%"
+            app:layout_marginLeftPercent="3%"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:id="@+id/oliveapp_frame_rate_text"/>
+
+        <!--关闭按钮-->
+        <ImageButton
+            android:id="@+id/oliveapp_close_image_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            app:layout_marginRightPercent="7%"
+            app:layout_marginTopPercent="7%"
+            app:layout_aspectRatio="75%"
+            app:layout_heightPercent="5%"
+            android:background="@mipmap/oliveapp_close_icon"/>
+
+        <!--提示文字-->
+        <android.support.percent.PercentRelativeLayout
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="10%"
+            app:layout_marginRightPercent="20%"
+            app:layout_marginTopPercent="24.6%"
+            app:layout_widthPercent="60%">
+
+            <TextView
+                android:id="@+id/oliveapp_detected_hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="请正对屏幕"
+                android:textColor="#FFFF00"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_marginLeftPercent="2%"
+                app:layout_marginRightPercent="2%" />
+
+            <ImageView
+                android:id="@+id/oliveapp_detected_hint_left_border"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@id/oliveapp_detected_hint_text"
+                android:src="@mipmap/oliveapp_detect_hint_left_corner"
+                app:layout_heightPercent="20%"
+                app:layout_widthPercent="2%" />
+
+            <ImageView
+                android:id="@+id/oliveapp_detected_hint_right_border"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/oliveapp_detected_hint_text"
+                android:src="@mipmap/oliveapp_detect_hint_right_corner"
+                app:layout_heightPercent="20%"
+                app:layout_widthPercent="2%" />
+        </android.support.percent.PercentRelativeLayout>
+        <!--倒计时-->
+        <TextView
+            android:id="@+id/oliveapp_count_time_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</RelativeLayout>

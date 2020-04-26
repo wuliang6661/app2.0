@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/uploadIntellgence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uoloadin"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/addNormalApplication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addnormalApp"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/addToDeskTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addDesktop"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

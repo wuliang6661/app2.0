@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_app_2" >
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="名称"
+                 />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[1条]"
+                     >
+                </TextView>
+
+                <TextView
+                    android:text="名称"
+                    android:layout_marginLeft="1dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"/>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="消息内容"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+             />
+    </LinearLayout>
+
+</LinearLayout>

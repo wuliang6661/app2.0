@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/oliveapp_activity_vertical_margin"
+    android:paddingLeft="@dimen/oliveapp_activity_horizontal_margin"
+    android:paddingRight="@dimen/oliveapp_activity_horizontal_margin"
+    android:paddingTop="@dimen/oliveapp_activity_vertical_margin"
+    android:id="@+id/oliveapp_start_button_layout"
+    tools:context=".liveness.SampleStartActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/oliveapp_homepage_bg_portrait_phone"
+            android:scaleType="centerCrop" />
+
+        <!--关闭按钮-->
+        <ImageButton
+            android:id="@+id/oliveappCloseLivenessButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/oliveapp_close_icon"
+            app:layout_marginRightPercent="6.6%"
+            app:layout_marginTopPercent="6.8%"
+            app:layout_widthPercent="7%"
+            app:layout_aspectRatio="100%"/>
+
+        <Button
+            android:id="@+id/oliveappStartLivenessButton"
+            android:background="@drawable/oliveapp_start_button_selector"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:layout_marginBottomPercent="10%"
+            app:layout_widthPercent="73.5%"
+            app:layout_aspectRatio="513%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@color/new_tbgcolor"
+    android:orientation="horizontal"
+    android:id="@+id/titlelayout">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/icon_back_x"
+        android:textColor="#FFFFFFFF" />
+
+    <ImageView
+        android:id="@+id/oneline"
+        android:layout_width="10dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/vertical_line" />
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxEms="9"
+        android:singleLine="true"
+        android:textColor="@color/text_blue_text"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@id/lblTitle"
+        android:src="@drawable/icon_silent"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/confirm"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/layout_selector1"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:orientation="vertical"
+                android:text="确定"
+                android:textColor="@color/text_blue_text"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="#FFFFFFFF"
+            android:visibility="gone" />
+        <ImageButton
+            android:id="@+id/cejian"
+            android:layout_width="40dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/menu"
+            android:visibility="gone"/>
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cejian"
+            android:visibility="gone"/>
+        <!-- <Button
+            android:id="@+id/menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="#FFFFFFFF"
+            android:text="如果你看到这些说明你没定义"
+            android:background="#202020"
+            android:visibility="gone" />      -->
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/popup"
+            android:background="@drawable/layout_selector"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/sao"
+                android:focusable="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/popup"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/layout_selector"
+
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <!--android:layout_toLeftOf="@+id/popup"-->
+
+            <ImageView
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/add"
+                android:focusable="false" />
+
+        </RelativeLayout>
+        <!--
+       <ImageButton
+           android:id="@+id/popup"
+           android:layout_width="60dp"
+           android:layout_height="48dp"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentTop="true"
+           android:textColor="#FFFFFFFF"
+           android:visibility="gone" />
+        -->
+    </RelativeLayout>
+</LinearLayout>

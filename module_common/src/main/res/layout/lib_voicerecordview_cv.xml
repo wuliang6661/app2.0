@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lib_voicerecordview_rcd_hint_bg"
+    android:gravity="bottom"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lib_linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lib_voicerecordview_rcd_hint" />
+
+        <ImageView
+            android:id="@+id/lib_imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/lib_voicerecordview_amp1_png" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lib_textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lib_linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/lib_imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lib_textView6"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/lib_voicerecordview_cancel_png" />
+
+</RelativeLayout>

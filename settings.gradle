@@ -1,0 +1,3 @@
+include ':app',':module_interface', ':module_common',':MPChartLib', ':MapLib', ":module_kuangshi",
+        ':im_lib',':module_stack',':synmonitor',':yitu_lib'
+//':module_publicaccount',

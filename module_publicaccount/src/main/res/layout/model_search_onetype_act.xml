@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titlebar_block"
+        layout="@layout/model_titlebar_search" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/relative_none"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/search_gray_sao"
+            android:id="@+id/imageview_noneresult"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  未找到相关结果"
+            android:textColor="@color/black_light"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageview_noneresult" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/public_result_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="公众号"
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/public_num_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="8dp"
+                    android:text="(0)"
+                    android:textColor="@color/mgreen" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/viewLine"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+                <ListView
+                    android:id="@+id/public_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/mwhite"
+                    android:dividerHeight="2px" />
+            </LinearLayout>
+            <View
+                style="@style/viewLine"
+                android:layout_height="1dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_result_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="公众号菜单"
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/menu_num_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="8dp"
+                    android:text="(0)"
+                    android:textColor="@color/mgreen" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/viewLine"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                >
+
+                <ListView
+                    android:id="@+id/menu_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/mwhite"
+                    android:dividerHeight="2px" />
+            </LinearLayout>
+            <View
+                style="@style/viewLine"
+                android:layout_height="1dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

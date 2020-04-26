@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mchat_bg_color">#EEEEEE</color>
+    <color name="translucent">#01000000</color>
+    <color name="mmain_fragment_bg">#EBEBEB</color>
+    <color name="mwhite">#FFFFFF</color>
+
+    <color name="mmodule_item_click">#DADADA</color>
+    <color name="mblue">#0000ff</color>
+    
+    <!-- #E33331 -->
+    <color name="mred">#D92222</color>
+    <color name="mgreen">#45C01A</color>
+    <color name="mgray_light">#99C9C9C9</color>
+    <color name="black_light">#808080</color>
+    
+    <color name="mdialog_bg_press">#E6E6E6</color>
+
+
+    <!-- 置顶联系人 item背景颜色 -->
+    <color name="mlastcontent_set_top_bg">#F5FFF1</color>
+
+
+    <color name="colorPrimary">#3396fb</color>
+    <color name="colorPrimaryDark">#649aff</color>
+    <color name="colorAccent">#666666</color>
+
+
+    <color name="transparent">#00000000</color>
+
+    <!-- 对讲界面颜色 -->
+    <color name="white">#ffffffff</color>
+    <color name="blackblack">#ff000000</color>
+
+    <color name="toolbar_btn_select">#D9D9D9</color>
+
+    <color name="color_transparent">#ffffffff</color>
+    <color name="color_pressed">#00ffffff</color>
+    <color name="mblue_black">#406f93</color>
+    <color name ="mgreen_light">#6eb111</color>
+
+    <!-- A light Holo shade of green -->
+    <!-- A light Holo shade of red -->
+    <!-- A dark Holo shade of blue -->
+    <!-- A dark Holo shade of green -->
+    <!-- A dark Holo shade of red -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <!-- A Holo shade of purple -->
+    <!-- A light Holo shade of orange -->
+    <!-- A dark Holo shade of orange -->
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="voice_bg">#0089d0</color>
+    <color name="tbgcolor">#202020</color>
+
+    <color name="lib_blue">#38adff</color>
+    <color name="new_tbgcolor">#f7f7f7</color>
+    <color name="text_blue_text">#38adff</color>
+
+    <color name="trans_pressed_main">#DADADA</color>
+    <color name="main_trans">#00ffffff</color>
+
+    <!--常用蓝色-->
+    <color name="blue_color">#649aff</color>
+</resources>

@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/titlebar_block"
+        layout="@layout/titlebar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新消息提示音"
+            android:textColor="#ff000000"
+            android:textSize="16sp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:text="返回"
+            android:textColor="#ff000000"
+            android:textSize="13sp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:text="保存"
+            android:textColor="#ff000000"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="开启震动"
+            android:textSize="@dimen/textview_size_normall" />
+
+        <qyc.library.tool.switchbutton.SwitchButton
+            android:id="@+id/swbt_vibrate"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:checked="true"
+            android:src="@drawable/setting_switch_press_normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="开启铃声"
+            android:textSize="@dimen/textview_size_normall" />
+
+        <qyc.library.tool.switchbutton.SwitchButton
+            android:id="@+id/swbt_sound"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:checked="true"
+            android:src="@drawable/setting_switch_press_normal" />
+    </LinearLayout>
+    <View
+        style="@style/viewLine"
+        android:layout_height="1dp" />
+    <ListView
+        android:paddingTop="3dp"
+        android:id="@+id/ring_lv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000" >
+    </ListView>
+
+</LinearLayout>

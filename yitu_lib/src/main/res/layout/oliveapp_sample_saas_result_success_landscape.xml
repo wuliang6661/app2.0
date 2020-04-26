@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/oliveapp_liveness_finish_bg_landscape_tablet">
+
+        <!--检测结果-->
+        <ImageView
+            android:id="@+id/oliveapp_liveness_result_image"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/oliveapp_liveness_finish_pass_tablet"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            app:layout_marginTopPercent="13.5%"
+            app:layout_widthPercent="36%"
+            app:layout_aspectRatio="462%"/>
+
+        <!--将下面列表使用listview表示-->
+        <ListView
+            android:id="@+id/oliveapp_liveness_saas_list"
+            android:layout_alignParentLeft="true"
+            app:layout_widthPercent="40%"
+            app:layout_heightPercent="40%"
+            app:layout_marginTopPercent="33.8%"
+            app:layout_marginLeftPercent="8.3%"
+            android:isScrollContainer="false"
+            android:divider="@android:color/transparent"
+            android:listSelector="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="40%"
+            app:layout_widthPercent="2%"
+            app:layout_marginTopPercent="33%"
+            android:src="@mipmap/oliveapp_divider_tablet"/>
+
+        <android.support.percent.PercentRelativeLayout
+            app:layout_widthPercent="40%"
+            app:layout_heightPercent="40%"
+            app:layout_marginTopPercent="33%"
+            app:layout_marginRightPercent="8.2%"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/oliveapp_liveness_result_border">
+
+            <!--两张人脸-->
+            <!--第一张-->
+            <ImageView
+                android:id="@+id/oliveapp_liveness_result_close"
+                app:layout_widthPercent="45%"
+                app:layout_heightPercent="90%"
+                app:layout_marginTopPercent="5%"
+                app:layout_marginLeftPercent="2.5%"/>
+
+            <ImageView
+                app:layout_widthPercent="40%"
+                app:layout_heightPercent="80%"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginLeftPercent="5%"
+                android:src="@mipmap/oliveapp_liveness_result_face_border"/>
+
+            <!--第二张-->
+            <ImageView
+                android:id="@+id/oliveapp_liveness_result_open"
+                app:layout_widthPercent="45%"
+                app:layout_heightPercent="90%"
+                app:layout_marginTopPercent="5%"
+                app:layout_marginRightPercent="2.5%"
+                android:layout_alignParentRight="true"/>
+
+            <ImageView
+                app:layout_widthPercent="40%"
+                app:layout_heightPercent="80%"
+                app:layout_marginTopPercent="10%"
+                app:layout_marginRightPercent="5%"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/oliveapp_liveness_result_face_border"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+        <Button
+            android:id="@+id/oliveapp_liveness_saas_result_finish"
+            android:layout_alignParentRight="true"
+            app:layout_marginTopPercent="82%"
+            app:layout_marginRightPercent="8.3%"
+            app:layout_widthPercent="18%"
+            app:layout_aspectRatio="200%"
+            android:background="@drawable/oliveapp_liveness_finish_button_tablet_selector"/>
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

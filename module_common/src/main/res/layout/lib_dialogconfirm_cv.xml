@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lib_dialogbg_sp_new"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="标题"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="43dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="43dp"
+        android:layout_weight="1.0">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内容内容内容"
+                android:textColor="@color/dialog_content_color"
+                android:textSize="@dimen/dialog_content_size" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+
+        <TextView
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

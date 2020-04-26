@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TestFragment</string>
+    <string name="voicetitle">语音播放</string>
+    <string name="locationSearch">轨迹查看</string>
+    <string name="title_activity_dynamic_location_list">DynamicLocationList</string>
+    <string name="uoloadin">上传情报</string>
+    <string name="addnormalApp">加入常用应用</string>
+    <string name="addDesktop">添加到桌面</string>
+    <string name="receiveBlueToothFile">蓝牙文件接收</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

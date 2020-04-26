@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:clickable="true"
+             android:focusable="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_public_account_none_png"
+            />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="应用"
+            android:textColor="@color/material_deep_teal_500"
+            android:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:contentDescription="delete this item"
+        android:padding="7dp"
+        android:src="@drawable/public_account_favorite_griditem_delete"
+        />
+    <ImageView
+        android:id="@+id/download"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:contentDescription="delete this item"
+        android:padding="7dp"
+        android:src="@drawable/down"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/gengxin"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:contentDescription="delete this item"
+        android:padding="7dp"
+        android:src="@drawable/gengxin"
+        android:visibility="gone"
+        />
+</FrameLayout>

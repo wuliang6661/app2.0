@@ -1,0 +1,5 @@
+<resources>
+    <string name="title_activity_sample_idcard">SampleIdcardActivity</string>
+    <string name="retry_take_photo">retry take photo</string>
+    <string name="back">back</string>
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="oliveapp_result_hint_text_pass">Congratuation!</string>
+    <string name="oliveapp_result_hint_text_fail">Please retry!</string>
+
+    <string name="oliveapp_ready_hint_start">开始吧</string>
+
+    <string name="oliveapp_string_second">秒</string>
+    <string name="oliveapp_string_count_down">倒计时</string>
+
+    <string name="oliveapp_face_hint_focus_here">请正对手机屏幕</string>
+    <string name="oliveapp_face_database_image_hint_front">请拍摄身份证正面，确保人像和文字清晰</string>
+    <string name="oliveapp_face_database_image_hint_back">请拍摄身份证背面，确保文字清晰</string>
+
+    <string name="oliveapp_step_hint_focus">请正对屏幕</string>
+    <string name="oliveapp_step_hint_mouthopen">请张嘴</string>
+    <string name="oliveapp_step_hint_eyeclose">请眨眼</string>
+    <string name="oliveapp_step_hint_headup">请抬头</string>
+    <string name="oliveapp_step_hint_headshake">请左右摇头</string>
+</resources>

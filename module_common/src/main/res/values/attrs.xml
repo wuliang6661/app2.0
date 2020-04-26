@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SpinnerEdit">
+        <attr name="labelText" format="string" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="editText" format="string" />
+        <attr name="editHint" format="string" />
+        <attr name="editAble" format="boolean"></attr>
+        <attr name="editColor" format="color"></attr>
+        <attr name="panelPadding" format="dimension"></attr>
+        <attr name="panelPaddingLeft" format="dimension"></attr>
+        <attr name="panelPaddingRight" format="dimension"></attr>
+        <attr name="panelPaddingTop" format="dimension"></attr>
+        <attr name="panelPaddingBottom" format="dimension"></attr>
+        <attr name="inputType">
+            <enum name="none" value="-1" />
+            <enum name="phone" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ListPullDown">
+        <attr name="listPullDownBackground" format="reference|color" />
+        <attr name="listPullDownCacheColorHint" format="reference|color" />
+        <attr name="listPullDownDivider" format="reference|color" />
+        <attr name="listPullDownDividerHeight" format="dimension" />
+        <attr name="listPullDownLoadingMoreTextColor" format="reference|color" />
+        <attr name="listPullDownLoadingMoreTextSize" format="dimension" />
+        <attr name="listPullDownFastScrollEnabled" format="boolean" />
+        <attr name="listPullDownTranscriptMode">
+            <enum name="alwaysScroll" value="2" />
+            <enum name="disabled" value="0" />
+            <enum name="normal" value="1" />
+        </attr>
+        <attr name="loadingMoreBackground" format="reference|color" />
+        <!-- 刷新球的背景色 -->
+        <attr name="refreshBkColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DateTimeWheel">
+        <attr name="wheelDateStyle">
+            <enum name="onlyDate" value="10" />
+            <enum name="onlyTime" value="11" />
+            <enum name="dateAndTime" value="12" />
+        </attr>
+        <attr name="wheelPadding" format="dimension" />
+        <attr name="wheelPaddingLeft" format="dimension" />
+        <attr name="wheelPaddingRight" format="dimension" />
+        <attr name="wheelPaddingTop" format="dimension" />
+        <attr name="wheelPaddingBottom" format="dimension" />
+        <attr name="wheelBackground" format="reference|color" />
+        <attr name="wheelForeground" format="reference|color" />
+        <attr name="wheelTextColor" format="color" />
+        <attr name="wheelTextSize" format="dimension" />
+        <attr name="wheelMinYear" format="integer" />
+        <attr name="wheelMaxYear" format="integer" />
+        <attr name="wheelDrawShadows" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ListExplorer">
+        <attr name="ExplorerBootImg" format="reference" />
+        <attr name="ExplorerBackImg" format="reference" />
+        <attr name="ExplorerFoldeImg" format="reference" />
+        <attr name="ExplorerFileImg" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ProgressWheel">
+        <attr name="progressWheelText" format="string" />
+        <attr name="progressWheelTextColor" format="color" />
+        <attr name="progressWheelTextSize" format="dimension" />
+        <attr name="progressWheelBarColor" format="color" />
+        <attr name="progressWheelRimColor" format="color" />
+        <attr name="progressWheelRimWidth" format="dimension" />
+        <attr name="progressWheelSpinSpeed" format="dimension" />
+        <attr name="progressWheelDelayMillis" format="integer" />
+        <attr name="progressWheelCircleColor" format="color" />
+        <attr name="progressWheelRadius" format="dimension" />
+        <attr name="progressWheelBarWidth" format="dimension" />
+        <attr name="progressWheelBarLength" format="dimension" />
+        <attr name="progressWheelContourColor" format="color" />
+        <attr name="progressWheelContourSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SwitchButton">
+        <attr name="onDrawable" format="reference" />
+        <attr name="offDrawable" format="reference" />
+        <attr name="thumbDrawable" format="reference" />
+        <attr name="thumb_margin" format="dimension|reference" />
+        <attr name="thumb_marginTop" format="dimension|reference" />
+        <attr name="thumb_marginBottom" format="dimension|reference" />
+        <attr name="thumb_marginLeft" format="dimension|reference" />
+        <attr name="thumb_marginRight" format="dimension|reference" />
+        <attr name="thumb_width" format="dimension|reference" />
+        <attr name="thumb_height" format="dimension|reference" />
+        <attr name="onColor" format="color|reference" />
+        <attr name="offColor" format="color|reference" />
+        <attr name="thumbColor" format="color|reference" />
+        <attr name="thumbPressedColor" format="color|reference" />
+        <attr name="animationVelocity" format="integer" />
+        <attr name="buttonRadius" format="integer" />
+        <attr name="measureFactor" format="float" />
+        <attr name="insetLeft" format="dimension|reference" />
+        <attr name="insetRight" format="dimension|reference" />
+        <attr name="insetTop" format="dimension|reference" />
+        <attr name="insetBottom" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectableRoundedImageView">
+        <attr name="sriv_left_top_corner_radius" format="dimension" />
+        <attr name="sriv_right_top_corner_radius" format="dimension" />
+        <attr name="sriv_left_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_right_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_border_width" format="dimension" />
+        <attr name="sriv_border_color" format="color" />
+        <attr name="sriv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+
+    <declare-styleable name="CropImageView">
+        <attr name="guidelines">
+            <enum name="on" value="2" />
+            <enum name="onTouch" value="1" />
+            <enum name="off" value="0" />
+        </attr>
+        <attr name="fixAspectRatio" format="boolean" />
+        <attr name="aspectRatioX" format="integer" />
+        <attr name="aspectRatioY" format="integer" />
+        <attr name="imageResource" format="reference" />
+    </declare-styleable>
+
+    <!-- h_listview -->
+    <declare-styleable name="LinearListView">
+        <attr name="android:entries" />
+        <attr name="dividerThickness" format="dimension" />
+    </declare-styleable>
+
+</resources>

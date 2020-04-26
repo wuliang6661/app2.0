@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mmain_fragment_bg"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <LinearLayout
+        android:id="@+id/bglinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="#0A0A0A"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_toRightOf="@id/iv_head"
+                    android:layout_marginLeft="5dp"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_sdfTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mwhite"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="2dp">
+            <LinearLayout
+                android:id="@+id/textlinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"></LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearlayout_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/locationtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:padding="10dp"
+                    android:text="轨迹类型"/>
+
+                <LinearLayout
+                    android:id="@+id/localtionlinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/trailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="-15dp"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="用户名称:"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/pointnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:gravity="center_vertical"
+                            android:text="历史轨迹点个数:"/>
+
+                        <ImageView
+                            android:id="@+id/pushlocation"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="visible"
+                            android:src="@drawable/public_push_location"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

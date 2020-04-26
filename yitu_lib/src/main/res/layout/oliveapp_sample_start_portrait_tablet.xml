@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/oliveapp_start_button_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/oliveapp_homepage_bg_portrait_phone"/>
+
+        <!--关闭按钮-->
+        <ImageButton
+            android:id="@+id/oliveappCloseLivenessButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/oliveapp_close_icon"
+            app:layout_heightPercent="4.1%"
+            app:layout_aspectRatio="100%"
+            app:layout_marginRightPercent="6.6%"
+            app:layout_marginTopPercent="6.8%"/>
+
+        <Button
+            android:id="@+id/oliveappStartLivenessButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/oliveapp_start_button_selector"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_marginBottomPercent="8%"
+            app:layout_widthPercent="73%"
+            app:layout_aspectRatio="513%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

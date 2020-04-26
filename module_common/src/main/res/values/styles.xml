@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 相册 -->
+    <style name="libBtnFlat" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_blue_library_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/lib_btnflat_textcolor_st</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="watermaker">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#22666666</item>
+        <item name="android:rotation">45</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:transformPivotX">15dp</item>
+        <item name="android:transformPivotY">15dp</item>
+    </style>
+
+</resources>

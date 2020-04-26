@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="常用应用"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_manage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="管理"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <View
+        style="@style/viewLine"
+        android:layout_height="1dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="This is Public Fragment"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_common"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+    </FrameLayout>
+
+</LinearLayout>

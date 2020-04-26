@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" >
+    </com.amap.api.maps.MapView>
+    <Button
+        android:id="@+id/locationSearch"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/locationSearch"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_blue_selector"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+      />
+
+    <LinearLayout
+        android:id="@+id/playpoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:id="@+id/seeklayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="速率："
+            android:layout_weight="1"
+            android:gravity="center"/>
+        <SeekBar
+            android:id="@+id/speedSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="5"
+            android:layout_gravity="center"
+
+           />
+        <TextView
+            android:id="@+id/speedNumber"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:text="1秒"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/playmove"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="播放"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_blue_selector"
+             android:layout_marginRight="10dp"
+            />
+        <Button
+            android:layout_toRightOf="@id/playmove"
+            android:id="@+id/stopmove"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="停止"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_blue_selector"
+
+            />
+            </LinearLayout>
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/locationSearch"-->
+        <!--android:textColor="@color/mwhite"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:text="发 送" />-->
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="orange">#FFFFFF</color>
+    <color name="colorDefaultBackground">#1A223E</color>
+
+    <color name="colorTabButtonSelectText">#FFFFFF</color>
+    <color name="colorTabButtonText">#000000</color>
+    <color name="itemBgColor">#fefefe</color>
+    <color name="itemSelectColor">#f0f0f0</color>
+    <color name="listLineColor">#e6e6e6</color>
+    <color name="itemdisabled">#f3f3f4</color>
+</resources>

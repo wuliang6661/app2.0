@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="synway.common">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".newCamera.NewCamera"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:taskAffinity="android.task.camera" />
+    </application>
+
+</manifest>

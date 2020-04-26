@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <include
+        android:id="@+id/id_titleBar_local"
+        layout="@layout/titlebar_album_local_video"/>
+
+    <RelativeLayout
+        android:id="@+id/id_bottom_ly_local"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ee000000"
+        android:clipChildren="true">
+
+        <TextView
+            android:id="@+id/id_dir_name_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="文件夹名称"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/id_dir_count_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="0张"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/id_gridView_local"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_titleBar_local"
+        android:layout_above="@id/id_bottom_ly_local"
+        android:padding="2dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:horizontalSpacing="3dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="3dp"
+        android:overScrollMode="never">
+    </GridView>
+</RelativeLayout>

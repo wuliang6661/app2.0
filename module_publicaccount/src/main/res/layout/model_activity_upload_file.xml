@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+    <include
+        android:id="@+id/include1"
+        layout="@layout/model_titlebar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView1"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp" />-->
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progressbar"
+            android:max="100"
+            android:progress="0"
+             />
+        <!--android:layout_below="@+id/imageView1"-->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            />
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:id="@+id/tv_timesize"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:text="loading..."-->
+        <!--android:layout_below="@id/rl_layout"/>-->
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"
+            android:textColor="#1AE642"
+            android:visibility="invisible"
+            android:text="文件上传完成"/>
+
+        <Button
+            android:id="@+id/bt_stop"
+            android:layout_marginTop="40dp"
+            style="@style/libBtnFlat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="取消上传"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

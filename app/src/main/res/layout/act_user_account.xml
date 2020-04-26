@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui_layout_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title2" />
+
+    <LinearLayout
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/f_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="修改密码"
+            android:textColor="@color/edit_color"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/next" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/f_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="安全退出登录"
+            android:textColor="#ed6161"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/next" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

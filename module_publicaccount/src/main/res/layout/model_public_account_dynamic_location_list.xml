@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="synway.module_publicaccount.map.view.DynamicLocationList"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/tbgcolor"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_back_x"
+            android:textColor="#FFFFFFFF" />
+
+        <ImageView
+            android:id="@+id/oneline"
+            android:layout_width="10dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/vertical_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="实时轨迹"
+            android:textColor="#38adff"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+               >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/btnok"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="确定"
+                android:textColor="#38adff"
+                android:textSize="18dp"
+                android:layout_marginRight="10dp"
+             />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hvChannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:id="@+id/rgChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/reciver_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+    </LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mgray_light"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp" >
+
+        <qyc.library.control.rounded_imageview.SelectableRoundedImageView
+            android:id="@+id/imageView1"
+            style="@style/contacts_listitem"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/contact_public_account_png"
+            android:visibility="gone"
+            app:sriv_oval="true" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:gravity="center_vertical"
+            android:text="K" />
+    </RelativeLayout>
+
+</LinearLayout>

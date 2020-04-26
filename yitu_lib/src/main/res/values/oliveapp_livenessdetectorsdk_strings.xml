@@ -1,0 +1,11 @@
+<resources>
+    <string name="oliveapp_detected_hint_none"></string>
+    <string name="oliveapp_detected_hint_face_not_found">请正对屏幕</string>
+    <string name="oliveapp_detected_hint_face_too_small_face">请靠近点</string>
+    <string name="oliveapp_detected_hint_face_too_large_face">请离远点</string>
+    <string name="oliveapp_detected_hint_light_too_bright">光线太亮了</string>
+    <string name="oliveapp_detected_hint_light_too_dark">光线太暗了</string>
+    <string name="oliveapp_detected_hint_face_side_face">请别侧脸</string>
+    <string name="oliveapp_detected_hint_face_up_face">请稍稍低头</string>
+    <string name="oliveapp_detected_hint_down_face">请稍稍抬头</string>
+</resources>

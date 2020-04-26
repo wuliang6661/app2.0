@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:id="@+id/buttom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/f_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <com.xyz.tabitem.BottmTabItem
+                android:id="@+id/main1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:xyzIcon="@drawable/main1"
+                app:xyzIconHeight="20dp"
+                app:xyzIconWidth="20dp"
+                app:xyzSelectIcon="@drawable/main1_xz"
+                app:xyzSelectState="true"
+                app:xyzTitle="消息"
+                app:xyzTitleColor="@color/edit_color"
+                app:xyzTitleSelectColor="@color/blue_color"
+                app:xyzTitleSize="12sp"
+                app:xyzTitleTop="5dp" />
+
+            <TextView
+                android:id="@+id/today_point"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="23dp"
+                android:background="@drawable/range_red"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/main2_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/main2_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/main2" />
+
+
+            <TextView
+                android:id="@+id/main2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLength="8"
+                android:singleLine="true"
+                android:text="杭州三汇"
+                android:textColor="@color/edit_color"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+        <com.xyz.tabitem.BottmTabItem
+            android:id="@+id/main3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:xyzIcon="@drawable/main3"
+            app:xyzIconHeight="20dp"
+            app:xyzIconWidth="20dp"
+            app:xyzSelectIcon="@drawable/main3_xz"
+            app:xyzSelectState="false"
+            app:xyzTitle="通讯录"
+            app:xyzTitleColor="@color/edit_color"
+            app:xyzTitleSelectColor="@color/blue_color"
+            app:xyzTitleSize="12sp"
+            app:xyzTitleTop="5dp" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/buttom_tab"
+        android:background="@color/line_bg" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:fitsSystemWindows="true" />
+
+</RelativeLayout>

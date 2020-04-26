@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/public_result_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+   >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:text="公众号"
+                android:textColor="@color/black_light" />
+
+            <TextView
+                android:id="@+id/public_num_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
+                android:text="(0)"
+                android:textColor="@color/mgreen" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/viewLine"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <ListView
+                android:id="@+id/public_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mwhite"
+                android:dividerHeight="2px" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/viewLine"
+            android:layout_height="1dp" />
+
+        <RelativeLayout
+            android:id="@+id/public_more_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/view_button_bgd"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/public_sao_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/search_sao_blue"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/public_sao_image"
+                android:text="  搜索更多公众号"
+                android:textColor="@color/mblue_black"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/viewLine"
+            android:layout_height="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/menu_result_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:text="公众号菜单"
+                android:textColor="@color/black_light" />
+
+            <TextView
+                android:id="@+id/menu_num_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
+                android:text="(0)"
+                android:textColor="@color/mgreen" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/viewLine"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <ListView
+                android:id="@+id/menu_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mwhite"
+                android:dividerHeight="2px" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/viewLine"
+            android:layout_height="1dp" />
+
+        <RelativeLayout
+            android:id="@+id/menu_more_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/view_button_bgd"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/menu_sao_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/search_sao_blue"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/menu_sao_image"
+                android:text="  搜索更多公众号菜单"
+                android:textColor="@color/mblue_black"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/viewLine"
+            android:layout_height="5dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/oliveapp_activity_horizontal_margin"
+    android:paddingRight="@dimen/oliveapp_activity_horizontal_margin"
+    android:paddingTop="@dimen/oliveapp_activity_vertical_margin"
+    android:paddingBottom="@dimen/oliveapp_activity_vertical_margin"
+    android:background="@mipmap/oliveapp_liveness_resultpage_bg"
+    tools:context="SampleUnusualResultActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--检测结果-->
+        <ImageView
+            android:id="@+id/oliveapp_liveness_result_image"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/oliveapp_liveness_finish_fail"
+            app:layout_marginTopPercent="33.6%"
+            app:layout_widthPercent="49.1%"
+            app:layout_aspectRatio="462%"/>
+
+        <TextView
+            android:id="@+id/oliveappResultTextView"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="20%"
+            app:layout_marginTopPercent="41.6%"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/oliveapp_liveness_result_retry"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oliveapp_liveness_finish_retry"
+            app:layout_marginBottomPercent="8%"
+            app:layout_marginLeftPercent="6.1%"
+            app:layout_widthPercent="41.7%"
+            app:layout_aspectRatio="295%"/>
+
+        <Button
+            android:id="@+id/oliveapp_liveness_result_return"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/oliveapp_liveness_finish_return_selector"
+            app:layout_marginBottomPercent="8%"
+            app:layout_marginRightPercent="6.1%"
+            app:layout_widthPercent="41.7%"
+            app:layout_aspectRatio="295%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

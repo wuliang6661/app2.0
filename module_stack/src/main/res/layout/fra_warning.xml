@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/wanning_message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/person_img" />
+
+
+                    <TextView
+                        android:id="@+id/waning_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#4d4d4d"
+                        android:textSize="13sp"
+                        tools:text="多人聚众赌博" />
+
+
+                    <TextView
+                        android:id="@+id/wanning_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        tools:text="2019-01-10 10:00" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/person_address" />
+
+
+                    <TextView
+                        android:id="@+id/wanning_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#4d4d4d"
+                        android:textSize="13sp"
+                        tools:text="多人聚众赌博多撒好的三点萨达是阿达萨达萨达萨达撒大 大大撒的撒大撒a" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/none_check_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center"
+                    android:text="暂无核查信息"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/add_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/button_right_blue"
+                    android:gravity="center"
+                    android:text="添加核查信息"
+                    android:textColor="@color/White"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/check_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="核查人："
+                            android:textColor="#1a1a1a"
+                            android:textSize="13sp" />
+
+
+                        <TextView
+                            android:id="@+id/person_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4d4d4d"
+                            android:textSize="13sp"
+                            tools:text="2019-10-15 -- " />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系方式："
+                            android:textColor="#1a1a1a"
+                            android:textSize="13sp" />
+
+
+                        <TextView
+                            android:id="@+id/person_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4d4d4d"
+                            android:textSize="13sp"
+                            tools:text="2019-10-15 -- " />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="所属机构："
+                        android:textColor="#1a1a1a"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/check_outfit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4d4d4d"
+                        android:textSize="13sp"
+                        tools:text="2019-10-15 -- " />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="核查时间："
+                        android:textColor="#1a1a1a"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/check_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4d4d4d"
+                        android:textSize="13sp"
+                        tools:text="2019-10-15 -- " />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="核查方式："
+                        android:textColor="#1a1a1a"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/check_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4d4d4d"
+                        android:textSize="13sp"
+                        tools:text="2019-10-15 -- " />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="结论："
+                        android:textColor="#1a1a1a"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/person_nationality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4d4d4d"
+                        android:textSize="13sp"
+                        tools:text="2019-10-15 -- " />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备注："
+                        android:textColor="#1a1a1a"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/person_marriage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4d4d4d"
+                        android:textSize="13sp"
+                        tools:text="2019-10-15 -- " />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/layout_waring_check" />
+
+        </LinearLayout>
+
+        <include layout="@layout/none_layout" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

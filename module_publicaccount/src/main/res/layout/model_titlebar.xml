@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:background="@color/blue_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_back"
+            android:tint="@color/mwhite"
+            />
+
+        <ImageView
+            android:id="@+id/closeview"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/back"
+            android:src="@drawable/closewenview"
+            android:padding="12dp"
+            android:tint="@color/mwhite"/>
+
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:textColor="@color/mwhite"
+            android:textSize="18sp"/>
+
+
+        <ImageView
+            android:id="@+id/fresh"
+            android:layout_width="40dp"
+            android:padding="5dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/fresh"
+            android:tint="@color/mwhite"/>
+    </RelativeLayout>
+</LinearLayout>

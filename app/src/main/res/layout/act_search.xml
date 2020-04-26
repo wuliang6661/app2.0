@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/hui_layout_bg">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/back_img"
+                android:gravity="center"
+                android:textColor="@color/f_white"
+                android:textSize="16sp"/>
+
+            <!--android:hint="请输入查询内容"-->
+            <!--android:textColorHint="@color/f_white"-->
+            <cn.synway.app.widget.ClearEditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@id/back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/edit_searh_bg"
+                android:drawableRight="@drawable/clistview_error"
+                android:gravity="center_vertical"
+                android:hint="请输入查询内容"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/f_white"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+
+    <include layout="@layout/empty_layout"/>
+
+
+</LinearLayout>

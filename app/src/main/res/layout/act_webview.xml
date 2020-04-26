@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titlebar_block"
+        layout="@layout/model_titlebar" />
+
+    <include
+        android:id="@+id/progress_imgs"
+        layout="@layout/progress_pic"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/progress_video"
+        layout="@layout/progress_video"
+        android:visibility="gone" />
+
+    <synway.module_publicaccount.public_chat.WebviewFn.newVideoVoice.VoicePlayerView
+        android:id="@+id/newpublicrtVoiceView"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:visibility="gone" />
+
+</LinearLayout>

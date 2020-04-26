@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content">
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/lib_progress_bg"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</FrameLayout>

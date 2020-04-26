@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/oliveapp_liveness_finish_bg_landscape_tablet">
+
+        <!--检测结果-->
+        <ImageView
+            android:id="@+id/oliveapp_liveness_result_image"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/oliveapp_liveness_finish_fail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_marginTopPercent="13.5%"
+            app:layout_widthPercent="36%"
+            app:layout_aspectRatio="462%"/>
+
+        <TextView
+            android:id="@+id/oliveappResultTextView"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="20%"
+            app:layout_marginTopPercent="41.6%"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/oliveapp_liveness_result_retry"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oliveapp_liveness_finish_retry_tablet_selector"
+            app:layout_marginBottomPercent="10.8%"
+            app:layout_marginLeftPercent="15%"
+            app:layout_widthPercent="31%"
+            app:layout_aspectRatio="300%"/>
+
+        <Button
+            android:id="@+id/oliveapp_liveness_result_return"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/oliveapp_liveness_finish_return_tablet_selector"
+            app:layout_marginBottomPercent="10.8%"
+            app:layout_marginRightPercent="15%"
+            app:layout_widthPercent="31%"
+            app:layout_aspectRatio="300%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

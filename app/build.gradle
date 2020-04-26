@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "synway.osc"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 202
+        versionName "2.0.2"//版本判断依据
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a'
+        }
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        //开启rainbowchatav音视频对讲,请同步modulercommon的appconfig
+        //        ndk {
+        //            // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置
+        //            abiFilters 'armeabi', 'armeabi-v7a' // , 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        //        }
+        packagingOptions {
+            exclude 'META-INF/proguard/androidx-annotations.pro'
+            exclude 'google/protobuf/field_mask.proto'
+        }
+
+    }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+                v2SigningEnabled false
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+
+    dexOptions {
+        //incremental true //增量编译，能够加快编译应用速度
+        javaMaxHeapSize "8g"
+        //在Gradle 进行dex的可能会遇到内存不够用的情况，错误信息大概是java.lang.OutOfMemoryError: GC overhead limit exceeded。这个时候只需要配置dexOptions的javaMaxHeapSize大小即可
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+    }
+}
+
+//本地包仓库
+repositories {
+
+    flatDir {
+        dirs '../module_common/aars', 'aars'
+    }
+//    flatDir {
+//        dirs '../module_publicaccount/aars', 'aars'
+//    }
+    google()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    compile project(':module_interface')
+    compile project(':module_common')
+//    compile project(':module_publicaccount')
+    compile project(':module_kuangshi')
+    compile project(':im_lib')
+    compile project(':module_stack')
+    compile project(':synmonitor')
+    compile project(':yitu_lib')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.guoqi.widget:actionsheet:1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectboxVersion"
+    releaseImplementation "io.objectbox:objectbox-android:$objectboxVersion"
+    implementation 'id.zelory:compressor:2.1.0'// 文件压缩库
+    implementation 'com.labo.kaji:relativepopupwindow:0.3.1'
+    implementation 'com.bigkoo:svprogresshud:1.0.6'
+//    implementation 'com.billy.android:smart-swipe:1.0.4'
+
+    //weex
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.taobao.android:weex_sdk:0.19.0.7@aar'
+    implementation 'com.jaydenxiao:ExpandableTextView:1.0.0'
+
+
+
+}
+
+// 注意下面的内容放到 dependencies 语句块的后面
+apply plugin: 'io.objectbox'

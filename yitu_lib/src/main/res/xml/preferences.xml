@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="pref_liveness_dection">
+
+    <PreferenceCategory android:title="模式">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_debug_mode"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="debug模式" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_with_prestart"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="是否预检" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="SaaS配置">
+        <EditTextPreference
+            android:key = "pref_saas_url"
+            android:title="SaaS地址"
+            android:defaultValue = "http://staging.yitutech.com"
+            android:layout="@layout/prefs_list_s_item"
+            />
+        <EditTextPreference
+            android:key = "pref_test_id"
+            android:title="TestId"
+            android:defaultValue = "testid"
+            android:layout="@layout/prefs_list_s_item"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="基础配置">
+
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/actionCountsList"
+            android:entryValues="@array/actionCountsList"
+            android:key="pref_action_counts_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="动作个数"
+            android:widgetLayout="@layout/arrow_widget" />
+        <ListPreference
+            android:defaultValue="10000"
+            android:entries="@array/livenessDectionOvertimeList_key"
+            android:entryValues="@array/livenessDectionOvertimeList_value"
+            android:key="pref_liveness_detection_overtime_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="活体超时时间"
+            android:widgetLayout="@layout/arrow_widget" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_fix_action"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="固定动作序列" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_action_sequence_category"
+        android:title="动作序列">
+
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/choiceActionSequenceList"
+            android:entryValues="@array/choiceActionSequenceList_value"
+            android:key="pref_action_one_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="动作一"
+            android:widgetLayout="@layout/arrow_widget" />
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/choiceActionSequenceList"
+            android:entryValues="@array/choiceActionSequenceList_value"
+            android:key="pref_action_two_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="动作二"
+            android:widgetLayout="@layout/arrow_widget" />
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/choiceActionSequenceList"
+            android:entryValues="@array/choiceActionSequenceList_value"
+            android:key="pref_action_three_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="动作三"
+            android:widgetLayout="@layout/arrow_widget" />
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/choiceActionSequenceList"
+            android:entryValues="@array/choiceActionSequenceList_value"
+            android:key="pref_action_four_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="动作四"
+            android:widgetLayout="@layout/arrow_widget" />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="防屏幕相关">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/fanpaiClsCountsList"
+            android:entryValues="@array/fanpaiClsCountsList"
+            android:key="pref_fanpaicls_counts_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="翻拍照数量"
+            android:widgetLayout="@layout/arrow_widget" />
+        <ListPreference
+            android:defaultValue="low"
+            android:entries="@array/fanpaiClsThreshold"
+            android:entryValues="@array/fanpaiClsThreshold"
+            android:key="pref_fanpaicls_threshold_list"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="防屏幕翻拍阈值"
+            android:widgetLayout="@layout/arrow_widget" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="存储相关">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_save_rgb"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="存rgb图" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_save_origin_image"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="存原图" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_save_package"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="存大礼包" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_fanpaicls_image"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="存翻拍照" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_jpeg_image"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="存JPEG" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_video"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="存视频" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_new_package"
+            android:layout="@layout/prefs_list_s_item"
+            android:title="是否开启信息收集" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="昏暗检测相关">
+        <ListPreference
+            android:key="pref_dark_detect_list"
+            android:entries="@array/darkDetectEntry"
+            android:entryValues="@array/darkDetectValue"
+            android:layout="@layout/prefs_list_s_item"
+            android:widgetLayout="@layout/arrow_widget"
+            android:title="昏暗检测阈值"/>
+    </PreferenceCategory>
+</PreferenceScreen>

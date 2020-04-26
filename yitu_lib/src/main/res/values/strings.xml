@@ -1,0 +1,5 @@
+<resources>
+    <string name="title_activity_sample_idcard">SampleIdcardActivity</string>
+    <string name="retry_take_photo">"重新拍照"</string>
+    <string name="back">"返回"</string>
+</resources>

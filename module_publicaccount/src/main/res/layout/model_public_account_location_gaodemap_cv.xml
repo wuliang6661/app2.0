@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <synway.module_publicaccount.map.show.GridHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></synway.module_publicaccount.map.show.GridHeadView>
+
+    <synway.common.voicerecord.VoiceRecordView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@null"
+        android:src="@drawable/location_voice"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:paddingLeft="15dp"
+    android:background="@color/hui_layout_bg"
+    android:gravity="center_vertical"
+    android:text="省市"
+    android:id="@+id/item_head_name"
+    android:textColor="@color/text_333"
+    android:textSize="12sp"/>

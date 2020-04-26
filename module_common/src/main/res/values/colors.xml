@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mblack">#000000</color>
+    <color name="mgary">#D9D9D9</color>
+    <color name="trans_gray">#33BBBBBB</color>
+    <color name="mblue_light">#38adff</color>
+    <color name="lib_spinneredit_editTextBgClick">#38adff</color>
+    <color name="lib_spinneredit_editTextBgUnClick">#00000000</color>
+    <color name="lib_dialog_viewline">#38adff</color>
+    <color name="lib_blue">#38adff</color>
+    <color name="lib_transparent">#00000000</color>
+
+    <color name="text_color">#38adff</color>
+    <color name="text_color_pressed">#2d8acc</color>
+    <color name="dialog_title_color">#363636</color>
+    <color name="dialog_content_color">#333333</color>
+
+
+    <color name="zhu_color">#649aff</color>
+</resources>

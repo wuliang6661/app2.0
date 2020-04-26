@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 橙色人脸框，仅供debug用，非产品需求 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:color="@color/orange"
+        android:width="2dp"/>
+
+</shape>

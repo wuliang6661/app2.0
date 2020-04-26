@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui_layout_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.main.personlist.personinfo.PersonInfoActivity"
+    tools:ignore="MergeRootFrame">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentScrim="@color/f_white">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/title_bg"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:statusBarScrim="@color/lib_transparent">
+
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="pin"
+                app:layout_collapseParallaxMultiplier="0.9" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="pin"
+                app:layout_collapseParallaxMultiplier="0.9">
+
+                <TextView
+                    android:id="@+id/head_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textColor="@color/f_white" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/back_img"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/f_white" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/layout_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="组织"
+                    android:textColor="@color/text_999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="公司"
+                    android:textColor="@color/text_333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="姓名"
+                    android:textColor="@color/text_999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="李四"
+                    android:textColor="@color/text_333"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_bg" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="电话"
+                    android:textColor="@color/text_999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableRight="@mipmap/phone"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/text_333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="部门"
+                    android:textColor="@color/text_999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/organ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="部门不萌"
+                    android:textColor="@color/text_333" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/manager_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/call_phone"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@mipmap/call_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="拨打电话"
+                android:textColor="#649aff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/send_msg"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/send_msg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="发消息"
+                android:textColor="#649aff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui_layout_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title2" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:hint="请输入配置名"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/text_333"
+            android:textColorHint="@color/text_999"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_bg" />
+
+        <EditText
+            android:id="@+id/edit_ip"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:digits=".0123456789"
+            android:hint="在此输入 IP 地址"
+            android:maxLength="15"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/text_333"
+            android:textColorHint="@color/text_999"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_bg" />
+
+        <EditText
+            android:id="@+id/edit_port"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:hint="在此输入端口号"
+            android:inputType="number"
+            android:maxLength="6"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/text_333"
+            android:textColorHint="@color/text_999"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_bg" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/btn_normal"
+            android:text="保存服务器"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+</LinearLayout>

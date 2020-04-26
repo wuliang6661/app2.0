@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/pubic_account_chat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/content_bg"
+        android:padding="3dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textSize="@dimen/textview_size_normall"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/public_chat_bottom_father_menu_png" />
+    </RelativeLayout>
+
+</LinearLayout>

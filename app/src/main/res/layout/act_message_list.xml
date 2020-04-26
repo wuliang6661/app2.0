@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui_layout_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_title2" />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/f_white"
+        app:tabBackground="@color/f_white"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/blue_color"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/blue_color"
+        app:tabTextAppearance="@style/MyTablayoutstyleText"
+        app:tabTextColor="@color/text_333" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_bg" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <LinearLayout
+        android:id="@+id/load_more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <ProgressBar
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="正在加载中..."
+            android:textColor="@color/hint_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

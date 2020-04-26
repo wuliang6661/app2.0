@@ -1,0 +1,236 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:814564128072667842",
+      "lastPropertyId": "5:8886705213572720259",
+      "name": "ConfigEntry",
+      "properties": [
+        {
+          "id": "1:3238756835423783964",
+          "name": "id"
+        },
+        {
+          "id": "2:8186791757328628420",
+          "name": "CONFIG_NAME"
+        },
+        {
+          "id": "3:8509366454262420836",
+          "name": "SERVER_IP"
+        },
+        {
+          "id": "4:1903894500092414408",
+          "name": "SERVER_PORT"
+        },
+        {
+          "id": "5:8886705213572720259",
+          "name": "IS_SELECTOR"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:6029549904976125063",
+      "lastPropertyId": "15:7204562134586781957",
+      "name": "MessageEntry",
+      "properties": [
+        {
+          "id": "1:6368335057902313484",
+          "name": "id"
+        },
+        {
+          "id": "2:8254083522897342284",
+          "name": "msg_id"
+        },
+        {
+          "id": "3:796354116778282457",
+          "indexId": "1:2358701155883022490",
+          "name": "recent_id"
+        },
+        {
+          "id": "4:9204584423031562077",
+          "name": "msg_type"
+        },
+        {
+          "id": "5:6603556088738975503",
+          "name": "msg_content"
+        },
+        {
+          "id": "6:5970139447328370202",
+          "name": "msg_time"
+        },
+        {
+          "id": "7:4001298121021624325",
+          "name": "send_user_id"
+        },
+        {
+          "id": "8:4817746248608311187",
+          "name": "send_user_name"
+        },
+        {
+          "id": "9:3943025800740610371",
+          "name": "send_user_head"
+        },
+        {
+          "id": "10:665520222208546082",
+          "name": "msg_send_status"
+        },
+        {
+          "id": "11:4124561212705620603",
+          "name": "msg_status"
+        },
+        {
+          "id": "12:3491826896290081160",
+          "name": "msg_read_status"
+        },
+        {
+          "id": "13:3688922541203851444",
+          "name": "file_path"
+        },
+        {
+          "id": "14:6591427336397093484",
+          "name": "voice_time"
+        },
+        {
+          "id": "15:7204562134586781957",
+          "name": "user_id"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:7748733986934902893",
+      "lastPropertyId": "10:163476641839079039",
+      "name": "RecentContactsEntry",
+      "properties": [
+        {
+          "id": "1:8601974692070370600",
+          "name": "id"
+        },
+        {
+          "id": "2:3606158705819002005",
+          "name": "contact_type"
+        },
+        {
+          "id": "3:5410175043289292236",
+          "name": "contact_id"
+        },
+        {
+          "id": "4:13683789476695865",
+          "name": "contact_name"
+        },
+        {
+          "id": "5:5163501246100174437",
+          "name": "contact_head"
+        },
+        {
+          "id": "6:692032580404493984",
+          "name": "contact_unread_num"
+        },
+        {
+          "id": "7:416068858206918256",
+          "name": "last_msg_local_time"
+        },
+        {
+          "id": "8:1412722366172222832",
+          "name": "index_top"
+        },
+        {
+          "id": "9:176348225222408721",
+          "indexId": "2:2025655440405605474",
+          "name": "chatMsgId"
+        },
+        {
+          "id": "10:163476641839079039",
+          "name": "user_id"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:1081221278639508645",
+      "lastPropertyId": "16:2177634704788816107",
+      "name": "UserEntry",
+      "properties": [
+        {
+          "id": "1:7903997634604788713",
+          "name": "id"
+        },
+        {
+          "id": "2:5550369330913315207",
+          "name": "user_id"
+        },
+        {
+          "id": "3:5114180211875637134",
+          "name": "user_name"
+        },
+        {
+          "id": "4:8618537541682620712",
+          "name": "mobile_phone"
+        },
+        {
+          "id": "5:1974096606422064417",
+          "name": "sex"
+        },
+        {
+          "id": "6:7353792253622453126",
+          "name": "organ_id"
+        },
+        {
+          "id": "7:7327192755152941164",
+          "name": "login_code"
+        },
+        {
+          "id": "8:7618049654220572366",
+          "name": "province"
+        },
+        {
+          "id": "9:9222976436461338331",
+          "name": "area"
+        },
+        {
+          "id": "10:6374746622439573234",
+          "name": "organ_name"
+        },
+        {
+          "id": "11:7043423320402788485",
+          "name": "update_time"
+        },
+        {
+          "id": "12:6857468870933058899",
+          "name": "isdelete"
+        },
+        {
+          "id": "13:6240089451776833342",
+          "name": "type"
+        },
+        {
+          "id": "14:1729403706336381421",
+          "name": "user_pic"
+        },
+        {
+          "id": "15:8302456622007487706",
+          "name": "user_roles"
+        },
+        {
+          "id": "16:2177634704788816107",
+          "name": "is_now_login"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:1081221278639508645",
+  "lastIndexId": "2:2025655440405605474",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

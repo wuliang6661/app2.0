@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="#00000000">
+
+        <synway.module_publicaccount.rtvideovoice.rtvoice.RTVoiceView
+            android:id="@+id/publicrtVoiceView"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+        <include
+            android:id="@+id/titlebar_block"
+            layout="@layout/model_titlebar" />
+
+    </RelativeLayout>
+</LinearLayout>

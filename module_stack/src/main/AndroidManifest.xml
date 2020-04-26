@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="synway.module_stack">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name">
+
+        <!--关注人员列表-->
+        <activity
+            android:name=".hm_leave.PersonListAct"
+            android:screenOrientation="portrait" />
+
+        <!--人员详情页面-->
+        <activity
+            android:name=".hm_leave.PersonMessageAct"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.hm_leave.personMessage" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <!--大图查看页面-->
+        <activity
+            android:name=".hm_leave.BigImgAct"
+            android:screenOrientation="portrait" />
+
+        <!--预警消息全屏页面-->
+        <activity
+            android:name=".hm_leave.PushWanningAct"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.hm_leave.PushWanningAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

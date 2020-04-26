@@ -1,0 +1,82 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="Translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/translucent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowAnimationStyle">@style/Animation</item>
+    </style>
+    
+    <!-- 去act切换效果 -->
+    <style name="Animation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+    
+
+
+    <!-- 横线 -->
+    <style name="viewLine">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/mgary</item>
+    </style>
+    <!-- 横线 -->
+    <style name="viewLine2">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.2dp</item>
+        <item name="android:background">@color/material_grey_100</item>
+    </style>
+    <style name="contacts_listitem">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+
+    <!--parent="@android:style/Theme.Dialog"-->
+
+    <style name="AppThemeQrCode" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+
+    <!--<style-->
+        <!--name="NotificationInfo"-->
+        <!--parent="android:TextAppearance.StatusBar.EventContent" />-->
+    <!--<style-->
+        <!--name="NotificationTitle"-->
+        <!--parent="android:TextAppearance.StatusBar.EventContent.Title" />-->
+    <declare-styleable name="GifTextureView"><attr format="reference|string" name="gifSource"/><attr format="boolean" name="isOpaque"/>
+    </declare-styleable>
+    <declare-styleable name="GifView"><attr format="boolean" name="freezesAnimation"/>
+    </declare-styleable>
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/holo_red_dark</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+</resources>

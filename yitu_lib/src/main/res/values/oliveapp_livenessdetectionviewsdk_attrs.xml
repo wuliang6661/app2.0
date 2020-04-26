@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FixedAspectLayout">
+        <attr name="oliveapp_aspectRatio" format="float"/>
+        <attr name="oliveapp_fixMode" format="integer">
+            <enum name="fixHeight" value="1"/>
+            <enum name="fixWidth" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

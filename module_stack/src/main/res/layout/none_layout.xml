@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/none_text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:text="暂无预警信息"
+        android:textColor="#999999"
+        android:textSize="13sp" />
+</LinearLayout>

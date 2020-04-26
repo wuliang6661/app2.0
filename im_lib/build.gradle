@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.google.protobuf:protobuf-java:3.5.0'
+    implementation 'com.alibaba:fastjson:1.2.49'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation files('libs/netty-tcp-4.1.33-1.0.jar')
+}

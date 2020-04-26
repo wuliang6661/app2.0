@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" ><!-- 选中状态 -->
+        <layer-list >
+            <item >
+                <shape android:shape="rectangle">
+                    <stroke android:width="2dp"  android:color="@color/mgreen_light"/>
+                </shape>
+            </item>
+            <item  android:bottom="2dp" >
+                <shape android:shape="rectangle" >
+                    <solid android:color="@color/mchat_bg_color"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item ><!-- 默认状态 -->
+        <shape >
+            <solid android:color="@color/mchat_bg_color"/>
+        </shape>
+    </item>
+</selector>

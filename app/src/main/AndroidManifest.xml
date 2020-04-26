@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.synway.app">
+
+
+    <!-- 微信权限-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--分享权限-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Required to run keep-alive service when targeting API 28 or higher -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="cn.synway.app.base.SynApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name="cn.synway.app.ui.SplashAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppStartTheme"
+            android:windowSoftInputMode="stateUnspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--主页-->
+        <activity
+            android:name="cn.synway.app.ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--登录-->
+        <activity
+            android:name="cn.synway.app.ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!--关于-->
+        <activity
+            android:name="cn.synway.app.ui.AboutActivity"
+            android:screenOrientation="portrait" />
+
+        <!--账号与安全页-->
+        <activity
+            android:name="cn.synway.app.ui.useraccount.UserAccountActivity"
+            android:screenOrientation="portrait" />
+
+        <!--修改密码-->
+        <activity
+            android:name="cn.synway.app.ui.editpass.EditPassActivity"
+            android:screenOrientation="portrait" />
+
+        <!--人脸识别页面-->
+        <activity
+            android:name="cn.synway.app.ui.recognize.LivenessActivity"
+            android:screenOrientation="portrait" />
+
+        <!--版本列表页面-->
+        <activity
+            android:name="cn.synway.app.ui.VersionListActivity"
+            android:screenOrientation="portrait" />
+
+        <!--人员名片-->
+        <activity
+            android:name="cn.synway.app.ui.main.personlist.personinfo.PersonInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <!--搜索页面-->
+        <activity
+            android:name="cn.synway.app.ui.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateUnspecified" />
+
+        <!--离线地图下载页-->
+        <activity
+            android:name="cn.synway.app.ui.downmap.DownMapActivity"
+            android:screenOrientation="portrait" />
+
+        <!--消息详情页-->
+        <activity
+            android:name="cn.synway.app.ui.messagedetails.MessageDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <!--消息搜索页-->
+        <activity
+            android:name="cn.synway.app.ui.serachmessage.SerachMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateUnspecified" />
+
+        <!--配置列表页-->
+        <activity
+            android:name="cn.synway.app.ui.config.ConfigActivity"
+            android:screenOrientation="portrait" />
+
+        <!--新增配置-->
+        <activity
+            android:name="cn.synway.app.ui.config.AddConfigActivity"
+            android:screenOrientation="portrait" />
+
+        <!--聊天页面-->
+        <activity
+            android:name="cn.synway.app.ui.chat.ImActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|stateUnspecified" />
+
+        <!--查看大图的界面-->
+        <activity
+            android:name=".ui.BigImageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--所有webview的跳转页面-->
+        <activity
+            android:name="cn.synway.app.ui.web.SynWebActivity"
+            android:screenOrientation="portrait" />
+
+        <!--分享选择联系人-->
+        <activity
+            android:name=".ui.selectpersonforshare.SelectPersonForShareActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- weex页面 -->
+        <activity
+            android:name=".ui.weex.WXPageActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.taobao.android.intent.action.WEEX" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.SynwayOsc.android.intent.category.WEEX" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="file" />
+                <data android:scheme="data" />
+                <data android:scheme="local" />
+                <data android:scheme="wxpage" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.synway.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--依图人脸检测页面-->
+        <activity
+            android:name=".ui.recognize.YiTuLivenessActivity"
+            android:screenOrientation="portrait" />
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a5743d4d09caed055bc5d622e1bfe69a509d1add" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,97 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "4.2"
+        /**
+         *  3.0  增加应用超市
+         *  2019-01-14 zjw  版本号改为4.0。
+         *  增加单主入口类型，业务号支持直接打开weex或者html页面，作为汇信一体化公用模块初始版本。
+         * 2019-01-16 dym  版本号改为4.1。
+         *  增加统一通知类型，支持统一通知类消息的接收。
+         *  2019-01-22 zjw 更新公众号模块功能，需要更新接口模块HomeFragment以及相应的类，需更新数据库版本至50
+         *  版本号改为4.2。
+         *
+         * ===========================版本对应服务需要的最低版本(汇信5.71)==================================
+         *  消息转发服务：1062
+         *  配置网站服务：2.01
+         *  推送PAPushSDK：1.5
+         *  手机资源调用接口：1.0.6
+         * ===========================版本对应服务需要的最低版本(汇信5.71)==================================
+         *
+         * ===========================APP当前数据库版本=======================================================
+         * 当前数据库版本为：54
+         * ===========================APP当前数据库版本=======================================================
+         */
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }WXPageActivity
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+}
+//本地包仓库
+repositories {
+    flatDir { dirs 'aars' }
+    flatDir {
+        dirs '../module_common/aars', 'aars'
+    }
+}
+dependencies {
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':MPChartLib')
+    compile project(':MapLib')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //接口模块  赵江武
+    implementation project(':module_interface')
+    //工具包  孙量
+    implementation project(':module_common')
+    //新二维码 杨思敏
+    implementation(name: 'qrcode-release', ext: 'aar')
+    //weex时间选择器
+    implementation(name: 'timePickerDialog-1.0.2', ext: 'aar')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v13:27.1.1'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    implementation 'net.grandcentrix.tray:tray:0.12.0'
+    //weex
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    api 'com.taobao.android:weex_sdk:0.19.0.7@aar'
+    implementation 'com.alibaba:fastjson:1.1.46.android'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    provided files('libs/AMap3DMap_6.5.0_AMapSearch_6.5.0_AMapLocation_4.4.0_20181122.jar')
+    implementation('com.amulyakhare:com.amulyakhare.textdrawable:1.0.1') {
+        exclude group: 'com.android.support'
+    }
+    implementation('com.nex3z:flow-layout:1.2.4') {
+        exclude group: 'com.android.support'
+    }
+    implementation(name: 'labelView-release', ext: 'aar')
+
+}

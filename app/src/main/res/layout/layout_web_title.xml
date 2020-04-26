@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/title_bar_layout"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue_color">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_back"
+            android:tint="@color/White" />
+
+        <ImageView
+            android:id="@+id/closeview"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/back"
+            android:padding="12dp"
+            android:src="@drawable/closewenview"
+            android:tint="@color/White" />
+
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:textColor="@color/White"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/fresh"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@drawable/fresh"
+            android:tint="@color/White" />
+    </RelativeLayout>
+</LinearLayout>

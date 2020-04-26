@@ -1,0 +1,15 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+build/android-profile
+/captures
+*.class
+cube-sdk/build/
+.idea/
+*.apk
+*.iml
+/build/
+/app/build
+.svn/
