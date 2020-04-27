@@ -50,7 +50,7 @@ public class PersonInPsListBO {
 
         private String userCount;
         private String id;
-        private Integer father;
+        private String father;
         private String name;
         private String province;
         private String area;
@@ -128,11 +128,11 @@ public class PersonInPsListBO {
             this.id = id;
         }
 
-        public Integer getFather() {
+        public String getFather() {
             return father;
         }
 
-        public void setFather(Integer father) {
+        public void setFather(String father) {
             this.father = father;
         }
 
@@ -282,7 +282,7 @@ public class PersonInPsListBO {
          */
 
         private String id;
-        private int father;
+        private String father;
         private String name;
         private String province;
         private String area;
@@ -300,11 +300,11 @@ public class PersonInPsListBO {
             this.id = id;
         }
 
-        public int getFather() {
+        public String getFather() {
             return father;
         }
 
-        public void setFather(int father) {
+        public void setFather(String father) {
             this.father = father;
         }
 

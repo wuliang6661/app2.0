@@ -241,7 +241,8 @@ public class PersonInfoActivity extends MVPBaseActivity<View, PersonInfoPresente
                 LogUtils.e(ev.getY());
                 if (appBarOffsize == 0) {
                     startY = ev.getY();
-                } else {
+                }
+                else {
                     startY = appBarHeight;
                 }
                 break;
@@ -274,6 +275,7 @@ public class PersonInfoActivity extends MVPBaseActivity<View, PersonInfoPresente
             LayoutParams params = this.mAppbar.getLayoutParams();
             params.height = appBarHeight;
             this.mAppbar.setLayoutParams(params);
+
         }
     }
 
