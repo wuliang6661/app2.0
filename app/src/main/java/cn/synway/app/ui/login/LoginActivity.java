@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ScrollView;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.StringUtils;
 
 import org.greenrobot.eventbus.EventBus;
@@ -34,6 +35,7 @@ import cn.synway.app.ui.main.MainActivity;
 import cn.synway.app.ui.recognize.YiTuLivenessActivity;
 import cn.synway.app.utils.AppManager;
 import cn.synway.app.utils.DeviceUtils;
+import cn.synway.app.utils.NetUtils;
 import cn.synway.app.widget.AlertDialog;
 
 
@@ -83,23 +85,6 @@ public class LoginActivity extends MVPBaseActivity<LoginContract.View, LoginPres
         EventBus.getDefault().unregister(this);
     }
 
-    /**
-     * 监听键盘弹起
-     */
-//    private void setListener() {
-//        // 监听键盘弹起或关闭(ScrollView)
-//        scollView.addOnLayoutChangeListener((v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
-//            if (oldBottom != 0 && bottom != 0 && (oldBottom - bottom > 100)) {
-////                    Toast.makeText(getApplicationContext(), "监听到软键盘弹起...", Toast.LENGTH_SHORT).show();
-////                    scrollView.fullScroll(ScrollView.FOCUS_DOWN);(会导致输入框失去焦点)
-//                // 获得屏幕
-//                View decorView = getWindow().getDecorView();
-//                scrollToBottom(decorView, v);
-//            } else if (oldBottom != 0 && bottom != 0 && (bottom - oldBottom > 100)) {
-////                    Toast.makeText(getApplicationContext(), "监听到软件盘关闭...", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
     @OnClick(R.id.bt_login)
     public void login() {
         strUserCode = editLoginUser.getText().toString().trim();

@@ -16,7 +16,7 @@ public class OrganDao {
      */
 
     private int areaType;
-    private int father;
+    private String father;
     private String id;
     private String name;
 
@@ -28,11 +28,11 @@ public class OrganDao {
         this.areaType = areaType;
     }
 
-    public int getFather() {
+    public String getFather() {
         return father;
     }
 
-    public void setFather(int father) {
+    public void setFather(String father) {
         this.father = father;
     }
 

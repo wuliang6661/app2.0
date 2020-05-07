@@ -23,6 +23,7 @@ import cn.synway.app.db.table.UserEntry;
 import cn.synway.app.ui.selectpersonforshare.SelectPersonForShareActivity;
 import cn.synway.app.ui.web.SynWebBuilder;
 import cn.synway.app.ui.weex.entity.WxMapData;
+import cn.synway.app.utils.NetUtils;
 
 
 /**
@@ -203,6 +204,15 @@ public class X5WebAppInterface {
         Intent intent = new Intent(mContext, SelectPersonForShareActivity.class);
         intent.putExtras(bundle);
         mContext.startActivity(intent);
+    }
+
+
+    /**
+     * 获取本机IP地址
+     */
+    @JavascriptInterface
+    public String getDevicesIP() {
+        return NetUtils.getIpAddress(mContext);
     }
 
 }
