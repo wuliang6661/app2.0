@@ -10,13 +10,12 @@ import android.provider.MediaStore;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
+import android.webkit.JsPromptResult;
+import android.webkit.JsResult;
+import android.webkit.ValueCallback;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
 
-import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient;
-import com.tencent.smtt.export.external.interfaces.JsPromptResult;
-import com.tencent.smtt.export.external.interfaces.JsResult;
-import com.tencent.smtt.sdk.ValueCallback;
-import com.tencent.smtt.sdk.WebChromeClient;
-import com.tencent.smtt.sdk.WebView;
 
 import java.io.File;
 import java.util.Calendar;
@@ -88,10 +87,10 @@ public class X5WebChromeClient extends WebChromeClient {
      * @param view
      * @param callback
      */
-    @Override
-    public void onShowCustomView(View view, IX5WebChromeClient.CustomViewCallback callback) {
-        super.onShowCustomView(view, callback);
-    }
+//    @Override
+//    public void onShowCustomView(View view, IX5WebChromeClient.CustomViewCallback callback) {
+//        super.onShowCustomView(view, callback);
+//    }
 
     /**
      * 该方法在当前页面退出全屏模式时回调，主程序应在这时隐藏之前show出来的View。

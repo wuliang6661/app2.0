@@ -113,9 +113,9 @@ public class SerachMessageActivity extends MVPBaseActivity<SerachMessageContract
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                if (RecycleUtils.isSlideToBottom(recyclerView)) {
-                    mPresenter.getMessageListByKey(searchInput.getText().toString(), true);
-                }
+//                if (RecycleUtils.isSlideToBottom(recyclerView)) {
+//                    mPresenter.getMessageListByKey(searchInput.getText().toString(), true);
+//                }
             }
         });
     }
@@ -202,6 +202,9 @@ public class SerachMessageActivity extends MVPBaseActivity<SerachMessageContract
             String url;
             switch (listBeans.get(position).getBusinessType()) {
                 case 0:
+                    if (StringUtils.isEmpty(listBeans.get(position).getPushUrl())) {
+                        return;
+                    }
                     url = listBeans.get(position).getPushUrl() + "?userName=" + userBO.getUserName() + "&phoneNumber=" +
                             userBO.getMobilePhoneNo() + "&userID=" + userBO.getUserID() + "&loginCode=" + userBO.getCode() +
                             "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan();

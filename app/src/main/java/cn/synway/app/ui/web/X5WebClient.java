@@ -3,18 +3,18 @@ package cn.synway.app.ui.web;
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Bitmap;
+import android.net.http.SslError;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.view.KeyEvent;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.blankj.utilcode.util.LogUtils;
-import com.tencent.smtt.export.external.interfaces.SslError;
-import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
-import com.tencent.smtt.export.external.interfaces.WebResourceError;
-import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
-import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
-import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
 
 import qyc.library.control.dialog_progress.DialogProgress;
 
@@ -89,6 +89,9 @@ public class X5WebClient extends WebViewClient {
     public void onPageFinished(WebView view, String url) {
         super.onPageFinished(view, url);
         stopProgress();
+        if (!view.getSettings().getLoadsImagesAutomatically()) {
+            view.getSettings().setLoadsImagesAutomatically(true);
+        }
     }
 
     /***

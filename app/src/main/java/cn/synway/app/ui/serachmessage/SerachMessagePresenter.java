@@ -24,7 +24,7 @@ public class SerachMessagePresenter extends BasePresenterImpl<SerachMessageContr
         }
         MessageKeyRequest request = new MessageKeyRequest();
         request.currentPage = page;
-        request.pageSize = 30;
+        request.pageSize = 20000;
         request.keyword = keyword;
         HttpServerImpl.getMessageByKey(request).subscribe(new HttpResultSubscriber<MessageListBo>() {
             @Override

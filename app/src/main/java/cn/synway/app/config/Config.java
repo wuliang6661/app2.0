@@ -1,9 +1,13 @@
 package cn.synway.app.config;
 
+import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.Utils;
+
 import java.util.List;
 
 import cn.synway.app.db.dbmanager.ConfigIml;
 import cn.synway.app.db.table.ConfigEntry;
+import cn.synway.app.utils.NetUtils;
 
 /**
  * author : wuliang
@@ -97,6 +101,24 @@ public class Config {
      */
     public static boolean SynCountlyLog = true;
 
+    /**
+     * 本机IP地址
+     */
+    public static String DEVICE_IP = "";
+
+
+    /**
+     * 本机IP地址适用异步线程获取
+     */
+    public static void getDeviceIP() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                DEVICE_IP = NetUtils.getIPAddress(Utils.getApp());
+                LogUtils.e(DEVICE_IP);
+            }
+        }).start();
+    }
 
 
     /**

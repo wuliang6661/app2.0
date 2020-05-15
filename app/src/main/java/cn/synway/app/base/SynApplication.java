@@ -46,12 +46,10 @@ public class SynApplication extends NettyChatApp {
         initObjectBox();
         //初始化weex
         initWeex();
-
-
-
         registerActivityLifecycleCallbacks(new AppLifecycleHandler());
         //x5内核初始化接口，初始化腾讯X5内核
         QbSdk.initX5Environment(getApplicationContext(), cb);
+        Config.getDeviceIP();
     }
 
 

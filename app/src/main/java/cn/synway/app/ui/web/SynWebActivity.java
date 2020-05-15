@@ -12,16 +12,12 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.CookieSyncManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.blankj.utilcode.util.AppUtils;
-import com.blankj.utilcode.util.DeviceUtils;
-import com.tencent.smtt.export.external.extension.interfaces.IX5WebViewExtension;
-import com.tencent.smtt.sdk.CookieSyncManager;
-import com.tencent.smtt.sdk.WebSettings;
-import com.tencent.smtt.sdk.WebView;
 
 import java.io.ByteArrayOutputStream;
 
@@ -114,27 +110,40 @@ public class SynWebActivity extends SynBaseActivity {
         WebSettings settings = webView.getSettings();
         //支持获取手势焦点
         webView.requestFocusFromTouch();
-        //支持Js
-        settings.setJavaScriptEnabled(true);
-        //支持插件
-        settings.setPluginState(WebSettings.PluginState.ON);
-        //设置适应屏幕
-        settings.setUseWideViewPort(true);
-        settings.setLoadWithOverviewMode(true);
-        //支持缩放
-        settings.setSupportZoom(false);
-        //隐藏原生的缩放控件
-        settings.setDisplayZoomControls(false);
-        //支持内容重新布局
-        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
-        settings.setSupportMultipleWindows(true);
-        settings.supportMultipleWindows();
-        //设置可访问文件
-        settings.setAllowFileAccess(true);
-        //当webView调用requestFocus时为webview设置节点
-        settings.setNeedInitialFocus(true);
-        settings.setTextZoom(100);
-        settings.setDomStorageEnabled(true);//DOM Storage
+//        //支持Js
+//        settings.setJavaScriptEnabled(true);
+//        //支持插件
+//        settings.setPluginState(WebSettings.PluginState.ON);
+//        //设置适应屏幕
+//        settings.setUseWideViewPort(true);
+//        settings.setLoadWithOverviewMode(true);
+//        //支持缩放
+//        settings.setSupportZoom(false);
+//        //隐藏原生的缩放控件
+//        settings.setDisplayZoomControls(false);
+//        //支持内容重新布局
+//        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+//        settings.setSupportMultipleWindows(true);
+//        settings.supportMultipleWindows();
+//        //设置可访问文件
+//        settings.setAllowFileAccess(true);
+//        //当webView调用requestFocus时为webview设置节点
+//        settings.setNeedInitialFocus(true);
+//        settings.setTextZoom(100);
+//        settings.setDomStorageEnabled(true);//DOM Storage
+        //webView's Setting的初始化
+        // 如果访问的页面中有Javascript，则webview必须设置支持Javascript。
+        webView.getSettings().setJavaScriptEnabled(true);
+        // 允许js弹出窗口r
+        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        // 设置是否使用最后一次缓存
+        //优先使用缓存
+        // webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        // 不使用缓存
+        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webView.getSettings().setDomStorageEnabled(true);
+        // 触摸焦点起作用,如果不设置，则在点击网页文本输入框时，不能弹出软键盘及不响应其他的一些事件。
+        webView.requestFocus();
         //设置支持自动加载图片
         if (Build.VERSION.SDK_INT >= 19) {
             settings.setLoadsImagesAutomatically(true);
@@ -144,14 +153,12 @@ public class SynWebActivity extends SynBaseActivity {
         //设置编码格式
         settings.setDefaultTextEncodingName("UTF-8");
         settings.setUserAgentString("Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn;) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/6.3 Mobile Safari/537.36");
-        settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+//        settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         //下面方法去掉滑动条
-        IX5WebViewExtension ix5 = webView.getX5WebViewExtension();
-        if (null != ix5) {
-            ix5.setScrollBarFadingEnabled(false);
-        }
-        // 触摸焦点起作用,如果不设置，则在点击网页文本输入框时，不能弹出软键盘及不响应其他的一些事件。
-        webView.requestFocus();
+//        IX5WebViewExtension ix5 = webView.getX5WebViewExtension();
+//        if (null != ix5) {
+//            ix5.setScrollBarFadingEnabled(false);
+//        }
 
         chromeClient = new X5WebChromeClient(this);
         webView.setWebChromeClient(chromeClient);
@@ -160,6 +167,19 @@ public class SynWebActivity extends SynBaseActivity {
         webView.addJavascriptInterface(new X5WebAppInterface(this), "Android");
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        webView.onResume();
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        webView.onPause();
+    }
 
     /**
      * 设置顶部布局事件监听
@@ -188,11 +208,11 @@ public class SynWebActivity extends SynBaseActivity {
     protected void onDestroy() {
         try {
             if (webView != null) {
-                webView.stopLoading();
-                webView.removeAllViewsInLayout();
-                webView.removeAllViews();
-                webView.setWebViewClient(null);
-                CookieSyncManager.createInstance(this).stopSync();
+//                webView.stopLoading();
+//                webView.removeAllViewsInLayout();
+//                webView.removeAllViews();
+//                webView.setWebViewClient(null);
+//                CookieSyncManager.createInstance(this).stopSync();
                 webView.destroy();
                 webView = null;
             }

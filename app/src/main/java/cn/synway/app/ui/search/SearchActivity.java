@@ -94,6 +94,7 @@ public class SearchActivity extends MVPBaseActivity<View, SearchPresenter> imple
                     msg.obj = s.toString(); //携带当前值
                     mMyHandler.removeMessages(SEARCHWHAT);
                     mMyHandler.sendMessageDelayed(msg, 1000);//隔一小段时间发送msg
+//                    mPresenter.getSearchVal(s.toString());
                 }
                 else {
                     getData(new ArrayList<>(), new ArrayList<>(), "");

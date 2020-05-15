@@ -256,15 +256,17 @@ public class MessageDetailsActivity extends MVPBaseActivity<MessageDetailsContra
             String url;
             switch (listBeans.get(position).getBusinessType()) {
                 case 0:
-                    url = listBeans.get(position).getPushUrl() + "?userName=" + userBO.getUserName() + "&phoneNumber=" +
-                            userBO.getMobilePhoneNo() + "&userID=" + userBO.getUserID() + "&loginCode=" + userBO.getCode() +
-                            "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan();
-                    //url = "http://172.18.100.37:8188/face/#/fullsearch";
-                    SynWebBuilder.builder()
-                            .setUrl(url)
-                            .setName("消息")
+                    if (!StringUtils.isEmpty(listBeans.get(position).getPushUrl())) {
+                        url = listBeans.get(position).getPushUrl() + "?userName=" + userBO.getUserName() + "&phoneNumber=" +
+                                userBO.getMobilePhoneNo() + "&userID=" + userBO.getUserID() + "&loginCode=" + userBO.getCode() +
+                                "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan();
+                        //url = "http://172.18.100.37:8188/face/#/fullsearch";
+                        SynWebBuilder.builder()
+                                .setUrl(url)
+                                .setName("消息")
 //                            .setUserId(userBO.getUserID())
-                            .start(MessageDetailsActivity.this);
+                                .start(MessageDetailsActivity.this);
+                    }
                     break;
                 case 1:
                     //跳转weex页面

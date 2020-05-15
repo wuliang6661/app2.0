@@ -18,6 +18,7 @@ import com.google.gson.Gson;
 import java.util.HashMap;
 import java.util.Map;
 
+import cn.synway.app.config.Config;
 import cn.synway.app.db.dbmanager.UserIml;
 import cn.synway.app.db.table.UserEntry;
 import cn.synway.app.ui.selectpersonforshare.SelectPersonForShareActivity;
@@ -212,7 +213,7 @@ public class X5WebAppInterface {
      */
     @JavascriptInterface
     public String getDevicesIP() {
-        return NetUtils.getIpAddress(mContext);
+        return Config.DEVICE_IP;
     }
 
 }
