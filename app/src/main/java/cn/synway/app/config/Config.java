@@ -22,12 +22,12 @@ public class Config {
     /**
      * App连接的服务ip
      */
-    public static String SERVER_IP = "176.16.21.14";
+    public static String SERVER_IP = "176.16.21.19";
 
     /**
      * App连接的服务端口
      */
-    public static String SERVER_PORT = "9060";
+    public static String SERVER_PORT = "9066";
 
     /**
      * 本地缓存的sp名称

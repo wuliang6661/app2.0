@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ScrollView;
 
-import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.StringUtils;
 
 import org.greenrobot.eventbus.EventBus;
@@ -35,7 +34,6 @@ import cn.synway.app.ui.main.MainActivity;
 import cn.synway.app.ui.recognize.YiTuLivenessActivity;
 import cn.synway.app.utils.AppManager;
 import cn.synway.app.utils.DeviceUtils;
-import cn.synway.app.utils.NetUtils;
 import cn.synway.app.widget.AlertDialog;
 
 

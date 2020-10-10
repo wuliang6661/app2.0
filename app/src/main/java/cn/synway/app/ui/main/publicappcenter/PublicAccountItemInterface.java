@@ -78,7 +78,8 @@ public class PublicAccountItemInterface implements OnRVItemClickListener<NetAPPB
             String url;
             url = entity.getBusinessUrl() + "?userName=" + userBO.getUserName() + "&phoneNumber=" +
                     userBO.getMobilePhoneNo() + "&userID=" + userBO.getUserID() + "&loginCode=" + userBO.getCode() +
-                    "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan();
+                    "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan()
+                    + "&userType=" + userBO.getType();
             SynWebBuilder.builder()
                     .setUrl(url)
                     .setId(entity.getId())

@@ -207,7 +207,8 @@ public class SerachMessageActivity extends MVPBaseActivity<SerachMessageContract
                     }
                     url = listBeans.get(position).getPushUrl() + "?userName=" + userBO.getUserName() + "&phoneNumber=" +
                             userBO.getMobilePhoneNo() + "&userID=" + userBO.getUserID() + "&loginCode=" + userBO.getCode() +
-                            "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan();
+                            "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan()
+                            + "&userType=" + userBO.getType();
                     //url = "http://172.18.100.37:8188/face/#/fullsearch";
                     SynWebBuilder.builder()
                             .setUrl(url)
