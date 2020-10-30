@@ -6,8 +6,8 @@ android {
         applicationId "synway.osc"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 209
-        versionName "2.0.9"//版本判断依据
+        versionCode 210
+        versionName "2.1.0"//版本判断依据
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

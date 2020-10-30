@@ -260,7 +260,7 @@ public class MessageDetailsActivity extends MVPBaseActivity<MessageDetailsContra
                         url = listBeans.get(position).getPushUrl() + "?userName=" + userBO.getUserName() + "&phoneNumber=" +
                                 userBO.getMobilePhoneNo() + "&userID=" + userBO.getUserID() + "&loginCode=" + userBO.getCode() +
                                 "&LoginOragian=" + userBO.getOrganName() + "&LoginOragianCode=" + userBO.getOrgan()
-                                + "&userType=" + userBO.getType();
+                                + "&userType=" + userBO.getType() + "&mobileAppUserid=" + userBO.getUserID();
                         //url = "http://172.18.100.37:8188/face/#/fullsearch";
                         SynWebBuilder.builder()
                                 .setUrl(url)
