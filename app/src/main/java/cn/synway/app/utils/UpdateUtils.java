@@ -43,8 +43,6 @@ import rx.Subscriber;
 public class UpdateUtils {
 
 
-
-
     public static boolean isUpdate;
 
     public static void checkUpdate(onSourssListener listener) {
@@ -54,15 +52,17 @@ public class UpdateUtils {
                 if (listener != null) {
                     listener.onComplan();
                 }
-                if(s==null){
+                if (s == null) {
+                    if (listener != null) {
+                        listener.nowIsNew();
+                    }
                     return;
                 }
                 String replace = AppUtils.getAppVersionName().replace(".", "");
                 int version = 0;
                 try {
                     version = Integer.parseInt(replace);
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     ToastUtils.showShort("版本解析有误");
                     return;
                 }
@@ -73,14 +73,12 @@ public class UpdateUtils {
                     }
                     if (Config.isUpdate) {
                         createCustomDialogTwo(s, listener);
-                    }
-                    else {
+                    } else {
                         new AlertDialog(AppManager.getAppManager().curremtActivity()).builder().setGone().
                                 setMsg("App有新版本，请前往应用商店更新！")
                                 .setPositiveButton("确定", null).show();
                     }
-                }
-                else {
+                } else {
                     if (listener != null) {
                         listener.nowIsNew();
                     }
@@ -129,8 +127,7 @@ public class UpdateUtils {
                         return true;
                     }
                     return false;
-                }
-                else {
+                } else {
                     return false;
                 }
             }
@@ -154,8 +151,7 @@ public class UpdateUtils {
             close.setVisibility(View.GONE);
             cancle.setVisibility(View.GONE);
             line.setVisibility(View.GONE);
-        }
-        else {
+        } else {
             baseDialog.setCanceledOnTouchOutside(true);
             textView.setVisibility(View.GONE);
             close.setVisibility(View.VISIBLE);

@@ -255,8 +255,8 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
      */
     private void initFragment() {
         if (Config.showMessageMenu && Config.showAddressListMenu) {
-            buttomTab.setVisibility(View.INVISIBLE);
-            line.setVisibility(View.INVISIBLE);
+            buttomTab.setVisibility(View.GONE);
+            line.setVisibility(View.GONE);
             mFragments = new SupportFragment[1];
             FragmentUtils.replace(getSupportFragmentManager(), new PublicAppCenterFragment(), R.id.fragment_container);
             return;

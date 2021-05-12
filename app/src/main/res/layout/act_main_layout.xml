@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/content"
     android:layout_width="match_parent"
@@ -12,10 +12,10 @@
         android:id="@+id/buttom_tab"
         android:layout_width="match_parent"
         android:layout_height="49dp"
-        android:layout_alignParentBottom="true"
         android:background="@color/f_white"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
 
         <RelativeLayout
@@ -110,15 +110,15 @@
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_above="@+id/buttom_tab"
-        android:background="@color/line_bg" />
+        android:background="@color/line_bg"
+        app:layout_constraintBottom_toTopOf="@+id/buttom_tab" />
 
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/line"
-        android:fitsSystemWindows="true" />
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/line" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
