@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">昆仑警务</string>
+    <string name="app_name">移动警务</string>
 
-    <string name="copy_right">CopyRight©%d"\n杭州三汇数字信息技术有限公司\n版权所有</string>
+    <string name="copy_right">CopyRight©2021"\n杭州三汇数字信息技术有限公司\n版权所有</string>
     <string name="arrow_down">\u25BC</string>
     <string name="arrow_up">\u25B2</string>
     <string name="ORGANTAGKEY">ORGANTAGKEY</string>

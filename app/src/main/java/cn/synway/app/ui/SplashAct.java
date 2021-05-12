@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -72,8 +73,7 @@ public class SplashAct extends SynBaseActivity {
             request.setLoginCode(loginCode);
             request.setLoginPwd(password);
             login(request);
-        }
-        else {
+        } else {
             gotoActivity(LoginActivity.class, true);
         }
     }
@@ -98,20 +98,19 @@ public class SplashAct extends SynBaseActivity {
                 Config.pushUpdatePort = configBO.getAppUploadPort();
                 Config.AppCenterName = configBO.getModelName();
                 Config.gartherUrl = configBO.getAppStatisticsUrl();
+                Config.showMessageMenu = "0".equals(configBO.getShowMessageMenu());
+                Config.showAddressListMenu = "0".equals(configBO.getShowAddressListMenu());
                 if ("1".equals(configBO.getIsMTerminal())) {   //机身码未绑定
                     gotoActivity(LoginActivity.class, true);
-                }
-                else {
+                } else {
                     if (Config.isOpenLogin) {
                         if (Config.isOpenLive) {
                             stopProgress();
                             YiTuLivenessActivity.startForAuth(SplashAct.this);
-                        }
-                        else {
+                        } else {
                             getUserInfo();
                         }
-                    }
-                    else {
+                    } else {
                         gotoActivity(LoginActivity.class, true);
                     }
                 }
@@ -137,8 +136,7 @@ public class SplashAct extends SynBaseActivity {
                 SynApplication.spUtils.put("userId", userBO.getUserID());
                 if (Config.isOpenLogin) {   //如果可以自动登录，则缓存数据
                     SynApplication.spUtils.put("isOpenLogin", Config.isOpenLogin);
-                }
-                else {
+                } else {
                     SynApplication.spUtils.remove("loginCode");
                     SynApplication.spUtils.remove("password");
                     SynApplication.spUtils.remove("isOpenLogin");

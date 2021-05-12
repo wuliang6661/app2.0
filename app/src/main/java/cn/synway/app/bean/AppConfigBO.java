@@ -35,6 +35,24 @@ public class AppConfigBO {
     private String modelName;
     private String appStatisticsUrl;
     private String msgInfo;
+    private String showMessageMenu;
+    private String showAddressListMenu;
+
+    public String getShowMessageMenu() {
+        return showMessageMenu;
+    }
+
+    public void setShowMessageMenu(String showMessageMenu) {
+        this.showMessageMenu = showMessageMenu;
+    }
+
+    public String getShowAddressListMenu() {
+        return showAddressListMenu;
+    }
+
+    public void setShowAddressListMenu(String showAddressListMenu) {
+        this.showAddressListMenu = showAddressListMenu;
+    }
 
     public void setMsgInfo(String msgInfo) {
         this.msgInfo = msgInfo;

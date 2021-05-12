@@ -23,11 +23,14 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.CrashUtils;
+import com.blankj.utilcode.util.FragmentUtils;
 import com.blankj.utilcode.util.SizeUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.bumptech.glide.Glide;
@@ -60,6 +63,7 @@ import cn.synway.app.ui.downmap.DownMapActivity;
 import cn.synway.app.ui.main.none.NoneFragment1;
 import cn.synway.app.ui.main.none.NoneFragment2;
 import cn.synway.app.ui.main.none.NoneFragment3;
+import cn.synway.app.ui.main.publicappcenter.PublicAppCenterFragment;
 import cn.synway.app.ui.useraccount.UserAccountActivity;
 import cn.synway.app.utils.AppManager;
 import cn.synway.app.utils.AvatarUtil;
@@ -99,9 +103,15 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
     ImageView main2Img;
     @BindView(R.id.main2_text)
     TextView main2Text;
+    @BindView(R.id.buttom_tab)
+    LinearLayout buttomTab;
+    @BindView(R.id.main1_layout)
+    RelativeLayout main1Layout;
+    @BindView(R.id.line)
+    View line;
 
     private int selectPosition = 0;
-    private SupportFragment[] mFragments = new SupportFragment[3];
+    private SupportFragment[] mFragments;
 
 
     private File cameraSavePath;//拍照照片路径
@@ -150,8 +160,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                     .create();
             userImage.setImageBitmap(avatar);
 
-        }
-        else {
+        } else {
             Glide.with(this).load(UserIml.getUser().getUserPic())
                     .error(R.drawable.police_picture)
                     .bitmapTransform(new CropCircleTransformation(this)).placeholder(R.drawable.police_picture).into(userImage);
@@ -207,8 +216,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
             boolean b = getPackageManager().canRequestPackageInstalls();
             if (b) {
                 AppUtils.installApp(file);
-            }
-            else {
+            } else {
                 this.updateAPKFile = file;
                 //请求安装未知应用来源的权限
                 ActivityCompat.requestPermissions(
@@ -216,8 +224,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                         new String[]{Manifest.permission.REQUEST_INSTALL_PACKAGES},
                         INSTALL_PACKAGES_REQUESTCODE);
             }
-        }
-        else {
+        } else {
             AppUtils.installApp(file);
         }
 
@@ -247,6 +254,53 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
      * 初始化fragment
      */
     private void initFragment() {
+        if (Config.showMessageMenu && Config.showAddressListMenu) {
+            buttomTab.setVisibility(View.INVISIBLE);
+            line.setVisibility(View.INVISIBLE);
+            mFragments = new SupportFragment[1];
+            FragmentUtils.replace(getSupportFragmentManager(), new PublicAppCenterFragment(), R.id.fragment_container);
+            return;
+        }
+        //不显示消息界面
+        if (Config.showMessageMenu) {
+            mFragments = new SupportFragment[2];
+            SupportFragment firstFragment = findFragment(NoneFragment2.class);
+            if (firstFragment == null) {
+                mFragments[0] = new NoneFragment2();
+                mFragments[1] = new NoneFragment3();
+
+                loadMultipleRootFragment(R.id.fragment_container, 0,
+                        mFragments[0],
+                        mFragments[1]);
+            } else {
+                // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
+                // 这里我们需要拿到mFragments的引用
+                mFragments[0] = firstFragment;
+                mFragments[1] = findFragment(NoneFragment3.class);
+            }
+            main1Layout.setVisibility(View.GONE);
+            return;
+        }
+        if (Config.showAddressListMenu) {
+            mFragments = new SupportFragment[2];
+            SupportFragment firstFragment = findFragment(NoneFragment1.class);
+            if (firstFragment == null) {
+                mFragments[0] = new NoneFragment1();
+                mFragments[1] = new NoneFragment2();
+
+                loadMultipleRootFragment(R.id.fragment_container, 0,
+                        mFragments[0],
+                        mFragments[1]);
+            } else {
+                // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
+                // 这里我们需要拿到mFragments的引用
+                mFragments[0] = firstFragment;
+                mFragments[1] = findFragment(NoneFragment2.class);
+            }
+            main3.setVisibility(View.GONE);
+            return;
+        }
+        mFragments = new SupportFragment[3];
         SupportFragment firstFragment = findFragment(NoneFragment1.class);
         if (firstFragment == null) {
             mFragments[0] = NoneFragment1.newInstance();
@@ -257,8 +311,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                     mFragments[0],
                     mFragments[1],
                     mFragments[2]);
-        }
-        else {
+        } else {
             // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
             // 这里我们需要拿到mFragments的引用
             mFragments[0] = firstFragment;
@@ -277,13 +330,25 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                 setButtom(0);
                 break;
             case R.id.main2_layout:
-                showHideFragment(mFragments[1], mFragments[selectPosition]);
-                selectPosition = 1;
+                //不显示消息界面
+                if (Config.showMessageMenu) {
+                    showHideFragment(mFragments[0], mFragments[selectPosition]);
+                    selectPosition = 0;
+                } else {
+                    showHideFragment(mFragments[1], mFragments[selectPosition]);
+                    selectPosition = 1;
+                }
                 setButtom(1);
                 break;
             case R.id.main3:
-                showHideFragment(mFragments[2], mFragments[selectPosition]);
-                selectPosition = 2;
+                //不显示消息界面
+                if (Config.showMessageMenu) {
+                    showHideFragment(mFragments[1], mFragments[selectPosition]);
+                    selectPosition = 1;
+                } else {
+                    showHideFragment(mFragments[2], mFragments[selectPosition]);
+                    selectPosition = 2;
+                }
                 setButtom(2);
                 break;
         }
@@ -352,8 +417,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
     public void onEvent(MainMenuEvent event) {
         if (!drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.openDrawer(GravityCompat.START);
-        }
-        else {
+        } else {
             drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
@@ -382,8 +446,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                     showToast("再按一次退出程序");
                     firstTime = secondTime;
                     return true;
-                }
-                else {
+                } else {
                     SynCountlyFactory.destorySynCountly();
                     AppManager.getAppManager().finishAllActivity();
                     System.exit(0);
@@ -444,8 +507,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                             Manifest.permission.RECORD_AUDIO
                     }, 1);
 
-        }
-        else {
+        } else {
             if (Config.isOpenWaterMaker) {
                 mPresenter.addWaterMaker();
             }
@@ -481,8 +543,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             uri = FileProvider.getUriForFile(Objects.requireNonNull(this), "cn.synway.app.fileprovider", cameraSavePath);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        }
-        else {
+        } else {
             uri = Uri.fromFile(cameraSavePath);
         }
         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
@@ -496,21 +557,18 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
         if (requestCode == 1 && resultCode == RESULT_OK) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 photoPath = String.valueOf(cameraSavePath);
-            }
-            else {
+            } else {
                 photoPath = uri.getEncodedPath();
             }
             Log.d("拍照返回图片路径:", photoPath);
             showProgress("");
             mPresenter.updateFile(new File(Objects.requireNonNull(photoPath)));
-        }
-        else if (requestCode == 2 && resultCode == RESULT_OK) {
+        } else if (requestCode == 2 && resultCode == RESULT_OK) {
 
             photoPath = PhotoFromPhotoAlbum.getRealPathFromUri(this, data.getData());
             showProgress("");
             mPresenter.updateFile(new File(photoPath));
-        }
-        else if (requestCode == INSTALL_PACKAGES_REQUESTCODE){
+        } else if (requestCode == INSTALL_PACKAGES_REQUESTCODE) {
             if (updateAPKFile != null) {
                 AppUtils.installApp(updateAPKFile);
             }
@@ -564,8 +622,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                         mPresenter.addWaterMaker();
                     }
                     initCrash();
-                }
-                else {
+                } else {
                     // 权限被用户拒绝了。
                     //若是点击了拒绝和不再提醒
                     //关于shouldShowRequestPermissionRationale
@@ -588,8 +645,7 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
                     if (updateAPKFile != null) {
                         AppUtils.installApp(updateAPKFile);
                     }
-                }
-                else {
+                } else {
                     //Toast.makeText(this, "请前往设置界面打开权限", Toast.LENGTH_SHORT).show();
                     new AlertDialog(this).builder().setGone().setMsg("无安装权限,点击确认前往设置界面")
                             .setNegativeButton("取消", null)

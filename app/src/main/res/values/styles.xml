@@ -49,7 +49,7 @@
     <style name="AppStartTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!--冷启动时间更慢 但是点击图标是立即打开视觉效果-->
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/ydjw_promotion</item>
+        <item name="android:windowBackground">@drawable/ydjw_promotion1</item>
     </style>
 
 

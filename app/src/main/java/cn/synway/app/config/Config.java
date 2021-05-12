@@ -102,6 +102,16 @@ public class Config {
     public static boolean SynCountlyLog = true;
 
     /**
+     * 消息界面是否显示 (默认显示)
+     */
+    public static boolean showMessageMenu = false;
+
+    /**
+     * 通讯录界面是否显示（默认显示）
+     */
+    public static boolean showAddressListMenu = false;
+
+    /**
      * 本机IP地址
      */
     public static String DEVICE_IP = "";

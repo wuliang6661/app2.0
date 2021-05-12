@@ -3,7 +3,7 @@
     android:id="@+id/scoll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg">
+    android:background="@drawable/login_bg1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,11 +31,19 @@
         </LinearLayout>
 
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginTop="71dp"
-            android:src="@drawable/login_logo" />
+            android:src="@drawable/login_logo" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="71dp"
+            android:text="@string/app_name"
+            android:textColor="@color/White"
+            android:textSize="40dp"
+            android:textStyle="bold" />
 
 
         <LinearLayout
@@ -52,7 +60,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="25dp"
-                android:src="@drawable/login_user" />
+                android:src="@drawable/login_user1" />
 
 
             <EditText
@@ -83,7 +91,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="25dp"
-                android:src="@drawable/login_password" />
+                android:src="@drawable/login_password1" />
 
 
             <EditText

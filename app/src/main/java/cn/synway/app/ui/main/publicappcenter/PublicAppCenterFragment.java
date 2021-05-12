@@ -168,12 +168,12 @@ public class PublicAppCenterFragment extends MVPBaseFragment<PublicAppCenterCont
      */
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void connectEvent(KeepEvent event) {
-        if (event.isContect) {
-            keepHint.setVisibility(View.GONE);
-        }
-        else {
-            keepHint.setVisibility(View.VISIBLE);
-        }
+        keepHint.setVisibility(View.GONE);
+//        if (event.isContect) {
+//            keepHint.setVisibility(View.GONE);
+//        } else {
+//            keepHint.setVisibility(View.VISIBLE);
+//        }
     }
 
     /**

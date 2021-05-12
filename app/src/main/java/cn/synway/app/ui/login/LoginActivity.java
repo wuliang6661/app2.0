@@ -11,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.blankj.utilcode.util.StringUtils;
 
@@ -171,6 +172,8 @@ public class LoginActivity extends MVPBaseActivity<LoginContract.View, LoginPres
         Config.pushUpdatePort = configBO.getAppUploadPort();
         Config.AppCenterName = configBO.getModelName();
         Config.gartherUrl = configBO.getAppStatisticsUrl();
+        Config.showMessageMenu = "0".equals(configBO.getShowMessageMenu());
+        Config.showAddressListMenu = "0".equals(configBO.getShowAddressListMenu());
 
         if (!StringUtils.isTrimEmpty(configBO.getMsgInfo())) {
             new AlertDialog(AppManager.getAppManager().curremtActivity()).builder().setGone().
