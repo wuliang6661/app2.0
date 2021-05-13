@@ -20,8 +20,11 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.DrawerLayout.SimpleDrawerListener;
 import android.util.Log;
+import android.util.Size;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -109,6 +112,8 @@ public class MainActivity extends MVPBaseActivity<MainContract.View, MainPresent
     RelativeLayout main1Layout;
     @BindView(R.id.line)
     View line;
+    @BindView(R.id.fragment_container)
+    FrameLayout fragmentContainer;
 
     private int selectPosition = 0;
     private SupportFragment[] mFragments;

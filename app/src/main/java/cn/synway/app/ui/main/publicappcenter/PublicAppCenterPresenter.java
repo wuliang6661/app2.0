@@ -63,9 +63,7 @@ public class PublicAppCenterPresenter extends BasePresenterImpl<PublicAppCenterC
                 headData.put(title, appDao);
             }
             else {
-                NetAPPBO appDao = headData.get(title);
-                int index = data.indexOf(appDao);
-                data.add(++index, netAPPBO);
+                data.add(netAPPBO);
             }
         }
 
