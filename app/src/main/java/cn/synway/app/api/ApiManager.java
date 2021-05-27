@@ -29,7 +29,7 @@ public class ApiManager {
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
     private static final String TAG = "ApiManager";
-    private static final int DEFAULT_TIMEOUT = 120;
+    private static final int DEFAULT_TIMEOUT = 30;
     private OkHttpClient.Builder builder;
 
 

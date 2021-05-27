@@ -142,7 +142,7 @@ public class X5WebClient extends WebViewClient {
      */
     @Override
     public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-        super.onReceivedSslError(view, handler, error);
+        handler.proceed();
     }
 
     /**
