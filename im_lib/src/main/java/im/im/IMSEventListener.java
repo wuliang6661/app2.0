@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import com.alibaba.fastjson.JSONObject;
+import com.freddy.im.listener.IMSConnectStatusCallback;
 import com.freddy.im.listener.OnEventListener;
 import com.freddy.im.protobuf.MessageProtobuf;
 
