@@ -136,6 +136,7 @@ public class SynWebActivity extends SynBaseActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         // 允许js弹出窗口r
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        webView.setLayerType(View.LAYER_TYPE_SOFTWARE,null);
         // 设置是否使用最后一次缓存
         //优先使用缓存
         // webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
@@ -152,7 +153,7 @@ public class SynWebActivity extends SynBaseActivity {
         }
         //设置编码格式
         settings.setDefaultTextEncodingName("UTF-8");
-        settings.setUserAgentString("Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn;) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/6.3 Mobile Safari/537.36");
+//        settings.setUserAgentString("Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn;) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/6.3 Mobile Safari/537.36");
 //        settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         //下面方法去掉滑动条
 //        IX5WebViewExtension ix5 = webView.getX5WebViewExtension();
