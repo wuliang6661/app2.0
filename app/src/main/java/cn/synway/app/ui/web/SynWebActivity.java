@@ -12,7 +12,6 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
@@ -111,24 +110,24 @@ public class SynWebActivity extends SynBaseActivity {
         //支持获取手势焦点
         webView.requestFocusFromTouch();
 //        //支持Js
-//        settings.setJavaScriptEnabled(true);
+        settings.setJavaScriptEnabled(true);
 //        //支持插件
-//        settings.setPluginState(WebSettings.PluginState.ON);
+        settings.setPluginState(WebSettings.PluginState.ON);
 //        //设置适应屏幕
-//        settings.setUseWideViewPort(true);
-//        settings.setLoadWithOverviewMode(true);
-//        //支持缩放
-//        settings.setSupportZoom(false);
-//        //隐藏原生的缩放控件
-//        settings.setDisplayZoomControls(false);
-//        //支持内容重新布局
-//        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
-//        settings.setSupportMultipleWindows(true);
-//        settings.supportMultipleWindows();
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(true);
+        //支持缩放
+        settings.setSupportZoom(false);
+        //隐藏原生的缩放控件
+        settings.setDisplayZoomControls(false);
+        //支持内容重新布局
+        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        settings.setSupportMultipleWindows(true);
+        settings.supportMultipleWindows();
 //        //设置可访问文件
-//        settings.setAllowFileAccess(true);
+        settings.setAllowFileAccess(true);
 //        //当webView调用requestFocus时为webview设置节点
-//        settings.setNeedInitialFocus(true);
+        settings.setNeedInitialFocus(true);
 //        settings.setTextZoom(100);
 //        settings.setDomStorageEnabled(true);//DOM Storage
         //webView's Setting的初始化

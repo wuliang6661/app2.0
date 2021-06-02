@@ -39,7 +39,7 @@ public class ApiManager {
     private ApiManager() {
         //手动创建一个OkHttpClient并设置超时时间
         builder = new OkHttpClient.Builder();
-        builder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
+        builder.connectTimeout(10, TimeUnit.SECONDS);
         builder.readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
         builder.writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
         HttpLoggingInterceptor.Level level = HttpLoggingInterceptor.Level.BODY;

@@ -226,4 +226,42 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/big_preen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+
+        <synway.common.watermaker.WaterText
+            style="@style/watermaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <synway.common.watermaker.WaterText
+            style="@style/watermaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_weight="1" />
+
+        <synway.common.watermaker.WaterText
+            style="@style/watermaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <synway.common.watermaker.WaterText
+            style="@style/watermaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
 </LinearLayout>

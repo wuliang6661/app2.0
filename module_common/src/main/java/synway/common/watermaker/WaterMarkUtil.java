@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.StringUtils;
 
 import synway.common.R;
@@ -46,8 +47,12 @@ public class WaterMarkUtil {
         }
         final ViewGroup rootView = activity.getWindow().getDecorView().findViewById(android.R.id.content);
         View framView = LayoutInflater.from(activity).inflate(R.layout.watermark, null);
+        View big_preen_layout = framView.findViewById(R.id.big_preen_layout);
         //可对水印布局进行初始化操作
         rootView.addView(framView);
+        if (ScreenUtils.getScreenHeight() > 1500) {
+            big_preen_layout.setVisibility(View.VISIBLE);
+        }
     }
 
 
