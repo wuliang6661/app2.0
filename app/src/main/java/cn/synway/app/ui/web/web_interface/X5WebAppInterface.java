@@ -24,7 +24,6 @@ import cn.synway.app.db.table.UserEntry;
 import cn.synway.app.ui.selectpersonforshare.SelectPersonForShareActivity;
 import cn.synway.app.ui.web.SynWebBuilder;
 import cn.synway.app.ui.weex.entity.WxMapData;
-import cn.synway.app.utils.NetUtils;
 
 
 /**

@@ -2,25 +2,34 @@ package cn.synway.app.ui.web;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.os.Parcelable;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.webkit.GeolocationPermissions;
 import android.webkit.JsPromptResult;
 import android.webkit.JsResult;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.FrameLayout;
 
 
 import java.io.File;
 import java.util.Calendar;
 import java.util.Locale;
+
+import cn.synway.app.widget.FullscreenHolder;
+import cn.synway.synmonitor.logutil.LogUtil;
 
 /**
  * Created by wuliang on 2017/4/11.
@@ -35,12 +44,22 @@ public class X5WebChromeClient extends WebChromeClient {
     public ValueCallback<Uri> mUploadMessage;
     public ValueCallback<Uri[]> mUploadCallbackAboveL;
     public final static int REQUEST_CODE = 1234;
+    public final static int VIDEO_REQUEST = 120;
+    public final static int AUDIO_CODE = 1111;
     private Activity activity;
     private Uri imageUri;
+    private FrameLayout mFrameLayout;
+    private WebView mWebView;
 
 
     public X5WebChromeClient(Activity context) {
         activity = context;
+    }
+
+
+    public void setData(FrameLayout frameLayout, WebView webView) {
+        this.mFrameLayout = frameLayout;
+        this.mWebView = webView;
     }
 
 
@@ -88,17 +107,55 @@ public class X5WebChromeClient extends WebChromeClient {
      * @param view
      * @param callback
      */
-//    @Override
-//    public void onShowCustomView(View view, IX5WebChromeClient.CustomViewCallback callback) {
-//        super.onShowCustomView(view, callback);
-//    }
+
+    protected static final FrameLayout.LayoutParams COVER_SCREEN_PARAMS = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+    public View customView;
+    private FrameLayout fullscreenContainer;
+    private WebChromeClient.CustomViewCallback customViewCallback;
+
 
     /**
-     * 该方法在当前页面退出全屏模式时回调，主程序应在这时隐藏之前show出来的View。
+     * 视频播放全屏
+     **/
+    @Override
+    public void onShowCustomView(View view, CustomViewCallback callback) {
+        // if a view already exists then immediately terminate the new one
+        if (customView != null) {
+            callback.onCustomViewHidden();
+            return;
+        }
+
+        activity.getWindow().getDecorView();
+        FrameLayout decor = (FrameLayout) activity.getWindow().getDecorView();
+        fullscreenContainer = new FullscreenHolder(activity);
+        fullscreenContainer.addView(view, COVER_SCREEN_PARAMS);
+        decor.addView(fullscreenContainer, COVER_SCREEN_PARAMS);
+        customView = view;
+        setStatusBarVisibility(false);
+        customViewCallback = callback;
+    }
+
+
+    private void setStatusBarVisibility(boolean visible) {
+        int flag = visible ? 0 : WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        activity.getWindow().setFlags(flag, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
+    /**
+     * 隐藏视频全屏
      */
     @Override
     public void onHideCustomView() {
-        super.onHideCustomView();
+        if (customView == null) {
+            return;
+        }
+        setStatusBarVisibility(true);
+        FrameLayout decor = (FrameLayout) activity.getWindow().getDecorView();
+        decor.removeView(fullscreenContainer);
+        fullscreenContainer = null;
+        customView = null;
+        customViewCallback.onCustomViewHidden();
+        mWebView.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -121,8 +178,11 @@ public class X5WebChromeClient extends WebChromeClient {
      */
     @Override
     public View getVideoLoadingProgressView() {
-        return super.getVideoLoadingProgressView();
+        FrameLayout frameLayout = new FrameLayout(activity);
+        frameLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        return frameLayout;
     }
+
 
     @Override
     public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
@@ -169,10 +229,27 @@ public class X5WebChromeClient extends WebChromeClient {
      * @param fileChooserParams
      * @return
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
         mUploadCallbackAboveL = filePathCallback;
-        takePhoto();
+        String[] accept = fileChooserParams.getAcceptTypes();
+        if (accept != null && accept.length > 0) {
+            LogUtil.e("wuliang", accept[0]);
+            switch (accept[0]) {
+                case "audio/*":
+                    audioStart();
+                    break;
+                case "video/*":
+                    recordVideo();
+                    break;
+                default:
+                    takePhoto();
+                    break;
+            }
+        } else {
+            takePhoto();
+        }
         return true;
 
     }
@@ -191,6 +268,33 @@ public class X5WebChromeClient extends WebChromeClient {
 
     public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType, String capture) {
         openFileChooser(uploadMsg);
+    }
+
+
+    /**
+     * 录像
+     */
+    private void recordVideo() {
+        Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+        intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+        //限制时长
+        intent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 15);
+        //开启摄像机
+        activity.startActivityForResult(intent, VIDEO_REQUEST);
+    }
+
+
+    /**
+     * 启动录音
+     */
+    private void audioStart() {
+        Intent intentRecord = new Intent();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            //添加这一句表示对目标应用临时授权该Uri所代表的文件
+            intentRecord.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        }
+        intentRecord.setAction(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
+        activity.startActivityForResult(intentRecord, VIDEO_REQUEST);
     }
 
 

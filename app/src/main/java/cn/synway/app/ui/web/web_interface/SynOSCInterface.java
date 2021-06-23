@@ -1,5 +1,6 @@
 package cn.synway.app.ui.web.web_interface;
 
+import android.annotation.SuppressLint;
 import android.webkit.JavascriptInterface;
 
 import cn.synway.app.ui.web.SynWebActivity;
@@ -40,6 +41,14 @@ public class SynOSCInterface {
     }
 
 
+    /**
+     * 获取经纬度
+     */
+    @SuppressLint("NewApi")
+    @JavascriptInterface
+    public void getLocation() {
+        paWebViewAct.getLocation();
+    }
 
 
     @JavascriptInterface
